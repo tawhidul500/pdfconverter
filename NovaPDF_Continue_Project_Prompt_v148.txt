@@ -1,0 +1,5 @@
+Continue NovaPDF from NovaPDF_Project_Handoff_v148_Migration_Show_Output_Parser_Corrective_Full.zip and NovaPDF_Build_Step_14_8_Migration_Show_Output_Parser_Corrective.zip.
+
+Read NovaPDF_Master_Project_Handoff_v148.md, RELEASE_NOTES_0.14.8.md, VALIDATION_REPORT_STEP_14_8.md, WINDOWS_VALIDATION_STEP_14_8.md, and the actual source before changing code.
+
+Windows validation already passed converter/OCR, root lint/TypeScript, 29 contracts, 12 engine tests, production build, backend compile/tests, and the actual PostgreSQL migration transaction. Step 14.8 fixes only the migration-show verification parser so TypeORM output `[X] 1 CreateSignatureRequestBackend1721800000000` is accepted. The parser must still reject `[ ]` and unrelated migrations. Preserve the Step 14.7 Node 24-safe launcher and Step 14.6 idempotency sequence. Do not delete volumes or use npm audit fix --force. Request Signatures remains disabled and must be implemented last.

@@ -1,0 +1,5 @@
+Continue NovaPDF from NovaPDF_Project_Handoff_v146_Migration_Apply_Verify_Sequence_Corrective_Full.zip and NovaPDF_Build_Step_14_6_Migration_Apply_Verify_Sequence_Corrective.zip.
+
+Read NovaPDF_Master_Project_Handoff_v146.md, RELEASE_NOTES_0.14.6.md, VALIDATION_REPORT_STEP_14_6.md, WINDOWS_VALIDATION_STEP_14_6.md, and the actual source before changing code.
+
+The real v0.14.5 Windows run passed converter/OCR tests, root lint/TypeScript/contracts/12 engine tests/build, and backend lint/typecheck/build/tests. It failed only because migration:show was checked before migration:run on a fresh database. Step 14.6 applies, verifies [X], then confirms idempotency. Do not delete volumes or use npm audit fix --force. Request Signatures remains disabled and must be implemented last.

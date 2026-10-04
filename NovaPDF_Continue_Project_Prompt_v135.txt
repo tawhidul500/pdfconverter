@@ -1,0 +1,23 @@
+Continue NovaPDF from `NovaPDF_Project_Handoff_v135_Windows_Runner_ESLint_Corrective_1_Full.zip` and `NovaPDF_Build_Step_13_5_Windows_Runner_ESLint_Corrective_1.zip`.
+
+Before coding, read the complete `NovaPDF_Master_Project_Handoff_v135.md`, `NovaPDF_All_Tools_Options.md`, `VALIDATION_REPORT_STEP_13_5.md`, and the actual source. Do not rebuild from assumptions.
+
+Current grounded state:
+- The real v0.13.4 Windows one-click run proved Docker, PostgreSQL, Redis, MinIO, Mailpit, root public-registry clean install, and root audit capture.
+- That run stopped at Root ESLint with five errors and one warning.
+- v0.13.5 corrects those exact findings in Edit PDF, shared viewer controls, Split PDF, and Sign PDF.
+- All 20 dependency-free source contracts pass, including the 19-check Step 13.5 corrective contract.
+- The Step 12.8 backend is unchanged.
+- Request Signatures remains disabled and not Working.
+
+Next actions:
+1. Extract v0.13.5 without deleting Docker volumes.
+2. Double-click `RUN_NOVAPDF_ALL.cmd`.
+3. Confirm Root ESLint passes and the runner continues through TypeScript, 20 source contracts, 11 PDF-engine tests, production build, backend validation, migration, health, 33 routes, and local sequential two-recipient E2E.
+4. Retain `validation-logs` and complete `WINDOWS_VALIDATION_STEP_13_5.md`.
+5. Complete the controlled root security regression and production-provider delivery/signature verification.
+6. Do not begin Step 12.9 or mark Request Signatures Working until every gate passes.
+
+Preserve all 32 tools, 12 implemented browser workspaces, current NovaPDF design, right-side panels, previews, bottom floating viewer controls, full-session history, keyboard shortcuts, one-way Sign PDF canvas scroll controller, lazy active-neighborhood previews, 50-200% zoom, file transfer, Start over, home reset, shared snap guides/rulers/distances, Shift-drag proportional resize, `allowedDevOrigins: ["172.24.48.1", "172.21.32.1"]`, public npm registry URLs only, and the one-click runner. Never use `docker compose down -v`, `npm audit fix`, or `npm audit fix --force`.
+
+Conversation replies should be Bangla. Website and UI content must remain US English. Every future handoff must include an updated one-click Windows runner and complete running instructions.

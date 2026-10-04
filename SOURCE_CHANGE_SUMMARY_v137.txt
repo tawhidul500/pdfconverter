@@ -1,0 +1,22 @@
+NovaPDF v0.13.7 source change summary
+
+Changed application files:
+- package.json
+- package-lock.json
+- src/components/workspace-zoom-controls.tsx
+- src/components/generic-tool-workspace.tsx
+- src/components/home-page.tsx
+- src/app/globals.css
+- test-files/run-source-contracts.mjs
+- historical Step 13 contracts updated to accept the corrective successor
+- test-files/test-step-13-7-viewer-visibility-portal-corrective.mjs
+- RUN_NOVAPDF_ALL.cmd
+
+Behavioral result:
+- no floating viewer before file upload;
+- no hidden-workspace portals;
+- exactly one viewer for the active document-ready workspace;
+- no stacked shadow/blur spot;
+- previous v0.13.6 viewer, page modes, keyboard, active-page, and smooth-resize behavior preserved.
+
+Backend source changes: none (68 files unchanged).

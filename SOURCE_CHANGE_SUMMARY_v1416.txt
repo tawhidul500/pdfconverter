@@ -1,0 +1,35 @@
+NovaPDF v0.14.16 source change summary
+
+Release basis: actual v0.14.15 source; no rebuild.
+
+Core conversion changes:
+- Replaced page-sized native fallback with cropped residual-artwork extraction.
+- Uniform page background is made transparent.
+- Reconstructed text, tables, shapes, and pictures are explicitly erased from residual pixels.
+- Text masks are dilated to remove antialiased ghost edges.
+- Connected-component filtering removes isolated dark/compression specks.
+- Fully reconstructable native pages emit no background picture.
+- Scanned pages retain the scan because it is the source artwork.
+- Font traits are detected from raw PDF font names before Word font mapping.
+- Text-object fill color is used as a fallback.
+- Word run fonts cover ASCII/high-ANSI/East Asian/complex scripts; bCs/iCs are emitted.
+- Positioned text-box ascent, dimensions, and exact line spacing were retuned.
+
+Regression coverage:
+- Native samples assert zero behind-document anchors.
+- Native samples assert one embedded media picture only.
+- Tests assert bold, color, and font-size OOXML.
+- Converter functional tests remain 11 and all pass.
+- Source contracts increased from 37 to 38 and all pass.
+
+Release/runner:
+- Version moved to 0.14.16 / Build Step 14.16.
+- RUN_NOVAPDF_ALL.cmd, launch/version scripts, UI copy, current checklist, and handoff updated.
+
+Preserved:
+- 32 tools / 33 routes.
+- Existing PDF engines and three PDF-to-Word modes.
+- English/Bangla OCR.
+- Exact allowed origins and novapdf-local Docker behavior.
+- 68-file backend byte identity.
+- Request Signatures deferred.

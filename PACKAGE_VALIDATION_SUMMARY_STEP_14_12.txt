@@ -1,0 +1,13 @@
+NovaPDF v0.14.12 package validation summary
+
+- 34/34 dependency-free source contracts passed.
+- Step 14.12 service-launch path contract: 18/18 checks passed.
+- 52 JavaScript/MJS syntax checks passed.
+- 100 TypeScript/TSX transpilation checks passed.
+- 5/5 PDF-to-Word/OCR service tests passed.
+- 464/464 npm lock resolved URLs use registry.npmjs.org.
+- 68/68 frozen Step 12.8 backend files are byte-for-byte unchanged from v0.14.11.
+- RUN_NOVAPDF_ALL.cmd, converter helper, and all three service launchers are CRLF-only and BOM-free.
+- No Docker volume deletion command and no automatic npm audit fix command.
+
+Windows CMD/PowerShell process-window acceptance and Microsoft Word opening must still be executed on the user's Windows machine.

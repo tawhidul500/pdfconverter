@@ -1,0 +1,27 @@
+NovaPDF Build Step 14.3 — Packaging Validation Summary
+
+PASS 25/25 dependency-free source contracts
+PASS Step 14.3 corrective contract (15 checks)
+PASS 46 MJS syntax checks
+PASS 100 TypeScript/TSX isolated syntax checks across frontend and unchanged backend
+PASS server proxy helper strict standalone type check
+PASS Python compile checks
+PASS 5/5 PDF to Word converter functional tests
+PASS direct converter health/analyze/convert integration
+PASS generated DOCX required-part validation and python-docx reopening
+PASS proxy online HTTP 200 behavior
+PASS proxy offline controlled HTTP 503 CONVERTER_OFFLINE behavior
+PASS 464/464 package-lock resolved URLs use https://registry.npmjs.org/
+PASS 32 tools and 33 public routes preserved
+PASS exact allowedDevOrigins preserved
+PASS backend 68/68 files byte-for-byte unchanged
+PASS no Docker volume deletion command
+PASS no automatic npm audit fix command
+PASS Request Signatures remains disabled and not Working
+
+PENDING ON WINDOWS
+- Docker Desktop/Compose build and runtime in the user's environment
+- root npm ci, audit capture, ESLint, semantic TypeScript, dependency-backed PDF tests, production build
+- unchanged backend dependency/runtime/migration/health/route/E2E gates
+- Chrome reported-four-issue regression and offline/recovery acceptance
+- Microsoft Word searchable/layout/OCR/separate/combined/range acceptance

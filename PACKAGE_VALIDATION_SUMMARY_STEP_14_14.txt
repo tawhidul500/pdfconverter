@@ -1,0 +1,12 @@
+NovaPDF v0.14.14 package validation summary
+
+- 36 source contracts passed
+- 10 converter tests passed
+- API hybrid conversion passed
+- LibreOffice digital/scanned rendering passed
+- 58 JS/MJS syntax checks passed
+- 101 TS/TSX transpilation checks passed
+- 464/464 public npm registry URLs
+- backend 68/68 byte-identical
+- CMD CRLF/BOM checks passed
+- Docker volume and forced audit protections preserved

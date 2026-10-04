@@ -1,0 +1,10 @@
+Step 14.14 API validation
+
+Endpoint: POST /api/v1/pdf-to-word/convert
+layout_mode: hybrid
+use_ocr: true
+Result: HTTP 200
+DOCX signature: PK
+Engine header: pdfium-python-docx-tesseract-opencv
+OOXML contained NovaPDFEditableText VML shapes and w:txbxContent.
+No hidden w:vanish text was present in hybrid output.

@@ -1,0 +1,14 @@
+NovaPDF v0.14.14 package validation summary
+
+- 35/35 dependency-free source contracts passed.
+- Step 14.13 contract: 20/20 checks passed.
+- 8/8 Python converter/OCR tests passed.
+- 57 JavaScript/MJS syntax checks passed.
+- 101 TypeScript/TSX transpilation checks passed.
+- Preserve-layout OCR-on/off scanned and digital renders were pixel-identical.
+- API visual+OCR conversion returned HTTP 200, valid DOCX, image layer, hidden text layer, and correct OCR headers.
+- 464/464 root package-lock resolved URLs use the public npm registry.
+- 68/68 backend files are byte-identical to v0.14.12.
+- Windows CMD files are CRLF-only and BOM-free.
+- No Docker volume deletion or automatic npm audit fix exists.
+- Full Windows runner and Microsoft Word Ctrl+F acceptance remain required.

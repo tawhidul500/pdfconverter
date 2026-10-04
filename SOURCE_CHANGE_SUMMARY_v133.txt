@@ -1,0 +1,32 @@
+NovaPDF v0.13.3 source change summary
+
+Shared:
+- unbounded per-session workspace history
+- NovaPDF bottom-center page/zoom/view controls
+- scroll-aware page number
+- active-workspace-only viewer effects and keyboard handling
+- expanded tool-appropriate keyboard shortcuts
+
+Homepage:
+- root route displays homepage
+- tool workspaces require explicit selection/direct route
+- brand and Home actions return to /
+
+Sign PDF:
+- checkbox tick, fill, stroke, stroke width, and proportional tick-size controls
+- square proportional checkbox resize and matching PDF export
+
+Edit PDF:
+- Sign-style drag and resize interaction
+- page/object snapping with live alignment guides
+- expanded object keyboard controls
+
+Preserved:
+- all 32 tools and 33 routes
+- current NovaPDF design and right-side panels
+- Step 12.8 backend unchanged
+- Request Signatures disabled/not Working
+- Docker volumes untouched
+- public npm registry project URLs
+- exact allowedDevOrigins values
+- one-click Windows runner requirement

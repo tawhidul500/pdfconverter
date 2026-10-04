@@ -1,0 +1,5 @@
+Step 14.6 backend byte identity
+Compared against packaged v0.14.5 backend.
+Files compared: 68
+Changed files: 0
+Result: PASS — all backend files are byte-for-byte unchanged.

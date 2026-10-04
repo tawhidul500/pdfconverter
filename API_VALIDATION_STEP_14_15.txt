@@ -1,0 +1,9 @@
+NovaPDF v0.14.15 API validation
+
+PASS: converter FastAPI version is 0.14.15.
+PASS: /health engine list remains pdfium, python-docx, tesseract, opencv.
+PASS: layout_mode accepts visual, hybrid, and editable.
+PASS: client/API response metadata remains compatible.
+PASS: Web version route reports 0.14.15 / Build Step 14.15.
+
+Live HTTP and Docker validation remain part of RUN_NOVAPDF_ALL.cmd on Windows.

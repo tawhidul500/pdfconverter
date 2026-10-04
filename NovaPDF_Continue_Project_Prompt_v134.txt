@@ -1,0 +1,24 @@
+Continue NovaPDF from NovaPDF_Project_Handoff_v134_Shared_Guides_Aspect_Resize_Full.zip and NovaPDF_Build_Step_13_4_Shared_Guides_Aspect_Resize.zip.
+
+Before coding, read the complete NovaPDF_Master_Project_Handoff_v134.md and NovaPDF_All_Tools_Options.md, then inspect the actual source. Do not rebuild from assumptions.
+
+Current implementation state:
+- 32 registered tools and 33 root routes remain;
+- twelve browser workspaces are implemented;
+- v0.13.3 bottom viewer, full-session history, keyboard coverage, homepage routing, Sign checkbox controls, and Edit alignment behavior remain;
+- v0.13.4 adds shared page/object edge-center snapping, live four-side distance rulers, live width/height labels, offset-preserving Watermark drag, Crop page snapping, and Shift+drag aspect-ratio resize in Sign PDF, Edit PDF, and Crop PDF;
+- all 19 dependency-free source contracts pass and all 92 TypeScript/TSX files pass syntax transpilation;
+- Step 12.8 backend remains unchanged;
+- Request Signatures remains disabled and is not Working.
+
+Next actions:
+1. Extract without deleting Docker volumes.
+2. Double-click RUN_NOVAPDF_ALL.cmd.
+3. Retain validation-logs.
+4. Complete WINDOWS_VALIDATION_STEP_13_4.md, including all four interactive canvas tools and Shift-resize checks.
+5. Complete controlled root security regression and production-provider delivery/webhook verification.
+6. Do not begin Step 12.9 or mark Request Signatures Working until every gate passes.
+
+Preserve all 32 tools, current NovaPDF design, right-side panels, bottom viewer, one-way canvas scroll controllers, lazy preview neighborhoods, 50-200% zoom, file transfer, Start over, home reset, allowedDevOrigins: ["172.24.48.1", "172.21.32.1"], public npm registry URLs only, Docker volumes, and the one-click runner. Never run npm audit fix --force.
+
+Conversation may be in Bangla, but all NovaPDF website UI copy must remain US English.

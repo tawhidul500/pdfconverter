@@ -1,0 +1,29 @@
+NovaPDF v0.13.6 source change summary
+
+Application changes:
+- src/components/workspace-zoom-controls.tsx
+- src/components/edit-pdf-workspace.tsx
+- src/components/sign-pdf-workspace.tsx
+- src/components/crop-pdf-workspace.tsx
+- src/lib/workspace-interaction-guides.ts
+- src/app/globals.css
+
+Validation changes:
+- test-files/test-step-13-6-viewer-active-page-smooth-resize.mjs
+- test-files/run-source-contracts.mjs
+- prior Step 13 contracts updated to accept the current 0.13.6 release metadata
+
+Release/runner changes:
+- package.json
+- package-lock.json
+- RUN_NOVAPDF_ALL.cmd
+- v0.13.6 release, running, validation, handoff, continuation, status, README, changelog, and options documentation
+
+Preserved:
+- backend directory byte-for-byte unchanged from v0.13.5
+- 32 tools
+- 33 root routes
+- Docker volumes and existing backend environment
+- exact allowedDevOrigins
+- public npm registry URLs
+- Request Signatures disabled/not Working

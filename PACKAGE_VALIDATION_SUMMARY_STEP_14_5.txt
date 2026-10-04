@@ -1,0 +1,12 @@
+NovaPDF v0.14.5 package validation summary
+
+27/27 dependency-free source contracts passed.
+8/8 Step 14.5 TypeScript corrective checks passed.
+100/100 TypeScript/TSX isolated syntax transpilation checks passed.
+48/48 MJS syntax checks passed.
+5/5 PDF converter/OCR functional tests passed.
+464/464 package-lock resolved URLs use registry.npmjs.org.
+68/68 Step 12.8 backend files remain byte-for-byte unchanged.
+32 tools and 33 public routes remain registered.
+Docker volumes are preserved; no automatic npm audit fix is used.
+Full Windows semantic TypeScript/build/runtime validation remains required.

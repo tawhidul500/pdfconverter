@@ -1,0 +1,13 @@
+NovaPDF v0.14.14 preserve-layout visual parity
+
+Scanned fixture:
+- OCR off PNG SHA-256: 0dcd1b1ea7ec5f0f7fd57e75012b41c57b69ad6366ed2ec2392cb81c36a1bdf1
+- OCR on  PNG SHA-256: 0dcd1b1ea7ec5f0f7fd57e75012b41c57b69ad6366ed2ec2392cb81c36a1bdf1
+- Pixel difference bounding box: none
+
+Digital fixture:
+- OCR off PNG SHA-256: 8b9878c1a0d1bc80647f4e83236d91ac6e98b9c7e98dae75502d08625313a538
+- OCR on  PNG SHA-256: 8b9878c1a0d1bc80647f4e83236d91ac6e98b9c7e98dae75502d08625313a538
+- Pixel difference bounding box: none
+
+LibreOffice rendering confirms the hidden searchable layer does not alter visible layout.

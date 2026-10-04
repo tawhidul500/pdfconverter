@@ -1,0 +1,62 @@
+export enum SigningMode {
+  PARALLEL = "PARALLEL",
+  SEQUENTIAL = "SEQUENTIAL",
+}
+
+export enum SignatureRequestStatus {
+  DRAFT = "DRAFT",
+  SENT = "SENT",
+  DELIVERED = "DELIVERED",
+  VIEWED = "VIEWED",
+  PARTIALLY_SIGNED = "PARTIALLY_SIGNED",
+  COMPLETED = "COMPLETED",
+  DECLINED = "DECLINED",
+  EXPIRED = "EXPIRED",
+  CANCELLED = "CANCELLED",
+}
+
+export enum RecipientStatus {
+  WAITING = "WAITING",
+  READY = "READY",
+  SENT = "SENT",
+  DELIVERED = "DELIVERED",
+  VIEWED = "VIEWED",
+  COMPLETED = "COMPLETED",
+  DECLINED = "DECLINED",
+  EXPIRED = "EXPIRED",
+  CANCELLED = "CANCELLED",
+}
+
+export enum SignatureFieldType {
+  SIGNATURE = "SIGNATURE",
+  INITIALS = "INITIALS",
+  NAME = "NAME",
+  DATE = "DATE",
+  TEXT = "TEXT",
+  INPUT = "INPUT",
+  CHECKBOX = "CHECKBOX",
+  STAMP = "STAMP",
+}
+
+export enum AuditActorType {
+  SENDER = "SENDER",
+  RECIPIENT = "RECIPIENT",
+  SYSTEM = "SYSTEM",
+  EMAIL_PROVIDER = "EMAIL_PROVIDER",
+}
+
+export enum EmailKind {
+  INVITATION = "INVITATION",
+  REMINDER = "REMINDER",
+  COMPLETED = "COMPLETED",
+  DECLINED = "DECLINED",
+  CANCELLED = "CANCELLED",
+}
+
+export enum EmailDeliveryStatus {
+  QUEUED = "QUEUED",
+  SENT = "SENT",
+  DELIVERED = "DELIVERED",
+  BOUNCED = "BOUNCED",
+  FAILED = "FAILED",
+}

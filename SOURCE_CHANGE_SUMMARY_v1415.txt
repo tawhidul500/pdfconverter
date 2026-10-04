@@ -1,0 +1,31 @@
+NovaPDF v0.14.15 source change summary
+
+Release basis: supplied v0.14.14 source; no rebuild.
+
+Core conversion changes:
+- Native PDF text objects removed before fallback rendering.
+- Rectangle-cell tables reconstructed as Word tables.
+- New line-grid table detector for independent horizontal/vertical PDF paths.
+- Aligned row/cell fills mapped into native Word table cells.
+- Supported simple paths emitted as Word shapes.
+- Embedded images emitted as anchored Word pictures.
+- Reconstructed objects removed from fallback artwork to prevent duplication.
+
+Regression coverage:
+- Added line-grid-layout.pdf fixture.
+- Added clean-background, two-table, picture, shape, and editable-text test.
+- Converter tests increased from 10 to 11.
+- Source contracts increased from 36 to 37.
+
+Release/runner:
+- Version moved to 0.14.15 / Build Step 14.15.
+- RUN_NOVAPDF_ALL.cmd updated to current version/checklist and converter native-object log.
+- Current handoff, status, release notes, Windows checklist, manifests, and checksums updated.
+
+Preserved:
+- 32 tools / 33 routes.
+- Existing PDF engines and PDF-to-Word modes.
+- English/Bangla OCR.
+- Exact allowed origins and novapdf-local Docker behavior.
+- 68-file Step 12.8 backend byte identity.
+- Request Signatures deferred.

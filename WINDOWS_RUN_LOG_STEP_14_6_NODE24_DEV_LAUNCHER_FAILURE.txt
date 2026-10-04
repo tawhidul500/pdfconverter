@@ -1,0 +1,13 @@
+Observed on Windows 10 with Node.js v24.18.0:
+
+> novapdf@0.14.6 dev
+> node scripts/start-novapdf-dev.mjs
+
+[NovaPDF] PDF converter is already online.
+Error: spawn EINVAL
+    at ChildProcess.spawn (node:internal/child_process:441:11)
+    at spawn (node:child_process:796:9)
+    at scripts/start-novapdf-dev.mjs:55:15
+
+Root cause: direct child_process.spawn() of npx.cmd without a shell on Windows.
+Step 14.7 executes the installed Next.js JavaScript CLI with process.execPath instead.

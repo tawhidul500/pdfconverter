@@ -1,0 +1,7 @@
+NovaPDF Step 14.1 backend byte-identity check
+Baseline files: 68
+Current files: 68
+Added files: 0
+Removed files: 0
+Changed files: 0
+Byte-for-byte identical: True

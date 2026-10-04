@@ -1,0 +1,12 @@
+NovaPDF Step 14.6 package validation summary
+- 28/28 dependency-free source contracts passed.
+- Step 14.6 migration corrective contract: 12/12 passed.
+- 100/100 TypeScript/TSX files passed isolated syntax transpilation.
+- 45/45 MJS files passed node --check.
+- Python syntax checks passed.
+- 5/5 converter/OCR functional tests passed.
+- 464/464 root lockfile resolved URLs use https://registry.npmjs.org/.
+- 68/68 Step 12.8 backend files are byte-for-byte unchanged from v0.14.5.
+- Exact allowedDevOrigins preserved.
+- No Docker volume deletion command and no automatic npm audit fix command.
+- Full Windows migration/health/routes/E2E/manual acceptance remains required.

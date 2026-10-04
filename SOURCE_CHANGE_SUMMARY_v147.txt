@@ -1,0 +1,9 @@
+Step 14.7 source changes:
+- Replaced direct `spawn("npx.cmd", ...)` with `spawn(process.execPath, [localNextCli, "dev"])`.
+- Derived the project root and local Next.js CLI path from `import.meta.url`.
+- Added controlled missing-install and child-spawn error handling.
+- Kept launcher shell-free and quoting-safe on Windows.
+- Preserved Step 14.6 migration apply/show/idempotency sequencing.
+- Updated current release identifiers and handoff documents to 0.14.7.
+- Added the Step 14.7 regression contract.
+- Preserved PDF-to-Word/OCR behavior and Step 12.8 backend source.

@@ -1,0 +1,23 @@
+NovaPDF Step 14.15 DOCX native-object audit
+
+Line-grid sample: NovaPDF_v0.14.15_Editable_Native_Objects_Sample.docx
+- Real Word tables: 2 (4x2 and 4x4)
+- VML shape nodes: 11
+- Editable Word text-box contents: 9
+- Anchored DrawingML objects: 2
+- Picture nodes: 2
+- Hidden w:vanish nodes: 0
+- Full-page fallback image: 1654x2339 pixels, 0 dark pixels, 0 non-white pixels
+- Separate embedded picture retained as independent media/object
+
+Complex-layout sample: NovaPDF_v0.14.15_Complex_Editable_Layout_Sample.docx
+- Real Word tables: 1 (4x3)
+- VML shape nodes: 28
+- Editable Word text-box contents: 22
+- Anchored DrawingML objects: 2
+- Picture nodes: 2
+- Hidden w:vanish nodes: 0
+- Full-page fallback image: 1654x2339 pixels, 0 dark pixels, 0 non-white pixels
+- Separate embedded picture retained as independent media/object
+
+Both files are valid DOCX ZIP packages and rendered as one clean page in LibreOffice headless QA. Microsoft Word acceptance on Windows remains pending.

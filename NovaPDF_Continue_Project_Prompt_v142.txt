@@ -1,0 +1,7 @@
+Continue NovaPDF from the Build Step 14.2 PDF to Word Service and OCR Candidate package.
+
+Before coding, read NovaPDF_Master_Project_Handoff_v142.md, NovaPDF_All_Tools_Options.md, RELEASE_NOTES_0.14.2.md, VALIDATION_REPORT_STEP_14_2.md, and WINDOWS_VALIDATION_STEP_14_2.md, then inspect the actual source.
+
+PDF to Word now uses a stateless local FastAPI conversion service with PyMuPDF, python-docx, and optional Tesseract OCR for English/Bangla. Do not restore the v0.14.1 hand-built browser OOXML download path. Preserve the client DOCX validation before download.
+
+Request Signatures remains disabled and must be built last. Continue the frontend-first tool sequence with fully functional tools, including any processing service required for reliable output.

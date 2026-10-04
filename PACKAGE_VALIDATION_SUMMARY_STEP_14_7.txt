@@ -1,0 +1,15 @@
+NovaPDF Step 14.7 package validation summary
+
+- 29/29 dependency-free source contracts passed.
+- Step 14.7 Windows Node 24 launcher contract: 15/15 passed.
+- Functional launcher stub test passed: the local Next.js CLI received `dev` through process.execPath.
+- 50 MJS syntax checks passed.
+- Python source syntax checks passed.
+- PDF-to-Word converter/OCR service tests: 5/5 passed.
+- 101/101 TS/TSX files are byte-for-byte unchanged from the Windows-validated Step 14.6 package.
+- 68/68 backend files are byte-for-byte unchanged from Step 14.6.
+- 464/464 package-lock resolved URLs use the public npm registry.
+- Exact allowedDevOrigins preserved.
+- Step 14.6 migration apply/show/idempotency sequence preserved.
+- No Docker-volume deletion command and no automatic npm audit fix.
+- Request Signatures remains disabled and deferred.

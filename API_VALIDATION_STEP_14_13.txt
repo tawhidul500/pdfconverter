@@ -1,0 +1,19 @@
+NovaPDF v0.14.14 conversion API validation
+
+GET /health:
+- status: ok
+- version: 0.14.14
+
+POST /api/v1/pdf-to-word/convert:
+- layout_mode=visual
+- use_ocr=true
+- ocr_language=eng
+- HTTP 200
+- Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+- X-NovaPDF-Pages: 1
+- X-NovaPDF-OCR-Pages: 1
+- X-NovaPDF-Native-Text-Pages: 0
+- DOCX ZIP integrity: passed
+- Visible inline image count: 1
+- Hidden Word text marker w:vanish: present
+- Extracted searchable text: NovaPDF OCR TEST

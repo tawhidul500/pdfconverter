@@ -1,0 +1,11 @@
+Step 14.14 visual validation
+
+Digital complex fixture:
+- one A4 page rendered successfully through LibreOffice
+- table borders, row fills, header colors, chart bars, embedded image, form panel, multi-column layout, and footer color retained
+- 34 visible editable text boxes generated
+
+Scanned complex fixture:
+- one A4 page rendered successfully through LibreOffice
+- artwork retained and 20 visible OCR text boxes generated
+- OCR/inpainting artifacts can occur and remain a documented Beta limitation

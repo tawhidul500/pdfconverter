@@ -1,0 +1,104 @@
+
+== test-files/test-step-10-1-interaction-contract.mjs ==
+Step 10.1 interaction source contracts passed.
+
+== test-files/test-step-11-1-interaction-contract.mjs ==
+Step 11.1 recovery and keyboard interaction contracts passed.
+
+== test-files/test-step-11-3-watermark-scope-toolbar.mjs ==
+Step 11.3 watermark scope, Edit text, and shared history toolbar contracts passed.
+
+== test-files/test-step-12-sign-contract.mjs ==
+Sign PDF contract passed (9 checks).
+
+== test-files/test-step-12-1-self-signing-contract.mjs ==
+Complete self-signing contract passed (9 checks).
+
+== test-files/test-step-12-2-sign-ux-contract.mjs ==
+Sign PDF UX redesign contract passed (10 checks).
+
+== test-files/test-step-12-3-signature-styles.mjs ==
+Step 12.3 signature style, automatic initials, and duplicate-control removal contract passed.
+
+== test-files/test-step-12-4-remove-duplicate-sign-workflow.mjs ==
+Step 12.4 duplicate pre-upload workflow chooser removal contract passed.
+
+== test-files/test-step-12-5-signature-setup-cleanup.mjs ==
+Step 12.5 streamlined signature setup contract passed.
+
+== test-files/test-step-12-6-sign-editor-refinement.mjs ==
+Step 12.6 Sign PDF editor refinement contract passed.
+
+== test-files/test-step-12-7-sign-core-stabilization.mjs ==
+Step 12.7 Sign PDF core stabilization contract passed.
+
+== test-files/test-step-12-8-route-manifest.mjs ==
+Route manifest passed: 33 routes (32 tools plus homepage).
+/
+/merge-pdf
+/split-pdf
+/compress-pdf
+/pdf-to-word
+/pdf-to-powerpoint
+/pdf-to-excel
+/word-to-pdf
+/powerpoint-to-pdf
+/excel-to-pdf
+/edit-pdf
+/pdf-to-jpg
+/jpg-to-pdf
+/sign-pdf
+/watermark-pdf
+/rotate-pdf
+/html-to-pdf
+/unlock-pdf
+/protect-pdf
+/organize-pdf
+/pdf-to-pdfa
+/repair-pdf
+/page-numbers-pdf
+/scan-to-pdf
+/ocr-pdf
+/compare-pdf
+/redact-pdf
+/crop-pdf
+/pdf-forms
+/ai-summarizer
+/translate-pdf
+/pdf-to-markdown
+/create-workflow
+
+== test-files/test-step-12-8-request-signatures-backend.mjs ==
+Step 12.8 request-signatures backend contract passed (36 checks).
+
+== test-files/test-watermark-interaction-contract.mjs ==
+Watermark click-selection, SVG controls, and document-level keyboard interaction contract passed.
+
+== test-files/test-step-13-edit-pdf-contract.mjs ==
+Step 13 Edit PDF source contract passed (43 checks).
+
+== test-files/test-step-13-1-sign-pdf-corrections.mjs ==
+Step 13.1 Sign PDF corrections contract passed (22 checks).
+
+== test-files/test-step-13-2-one-click-runner.mjs ==
+Step 13.2 one-click Windows runner contract passed (32 checks).
+
+== test-files/test-step-13-3-shared-controls-checkbox-edit-alignment.mjs ==
+Step 13.3 shared controls, keyboard, checkbox, homepage, and Edit alignment contract passed (91 checks).
+
+== test-files/test-step-13-4-shared-guides-aspect-resize.mjs ==
+Step 13.4 shared guides, rulers, distances, and Shift-resize contract passed (57 checks).
+
+== test-files/test-step-13-5-windows-runner-eslint-corrective.mjs ==
+Step 13.5 Windows runner ESLint corrective contract passed (19 checks).
+
+== test-files/test-step-13-6-viewer-active-page-smooth-resize.mjs ==
+Step 13.6 unified viewer, active-page targeting, smooth resize, and Sign panel contract passed (32 checks).
+
+== test-files/test-step-13-7-viewer-visibility-portal-corrective.mjs ==
+Step 13.7 document-ready viewer visibility and duplicate portal corrective passed (16 checks).
+
+== test-files/test-step-14-1-pdf-to-word-working.mjs ==
+Step 14.1 PDF to Word working source contract passed (24 checks).
+
+All 23 dependency-free source contracts passed.

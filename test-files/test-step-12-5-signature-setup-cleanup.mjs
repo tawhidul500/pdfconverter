@@ -1,0 +1,14 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+const source = await readFile(new URL("../src/components/sign-pdf-workspace.tsx", import.meta.url), "utf8");
+const css = await readFile(new URL("../src/app/globals.css", import.meta.url), "utf8");
+assert.match(source, /useState<SignatureSourceMode>\("type"\)/);
+assert.match(source, /SIGNATURE_INK_PALETTE/);
+assert.match(source, /aria-label="Signature color"/);
+assert.match(source, /aria-label="Initials color"/);
+assert(!source.includes("Use selected typed signature"));
+assert(!source.includes('className="sign-color-row"'));
+assert(!source.includes('activeAsset?.kind === "signature" && <div className="sign-details-active-asset"'));
+assert.match(source, /if \(sourceMode === "type"\) preparedSignatureId = await createTypedSignatureAsset\(\)/);
+assert.match(css, /\.sign-ink-palette/);
+console.log("Step 12.5 streamlined signature setup contract passed.");

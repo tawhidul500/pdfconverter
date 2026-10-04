@@ -1,0 +1,6 @@
+NovaPDF Build Step 14.2 backend boundary
+Baseline: NovaPDF Build Step 14.1 package
+Compared source files: 68
+Identical files: 68
+Changed backend files: 0
+Result: PASS — Step 12.8 Request Signatures backend remains byte-for-byte unchanged.

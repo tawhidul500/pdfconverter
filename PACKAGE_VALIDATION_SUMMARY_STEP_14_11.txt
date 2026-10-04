@@ -1,0 +1,16 @@
+NovaPDF Step 14.11 package validation summary
+
+Source contracts: 33/33 PASS
+Step 14.11 checks: 17/17 PASS
+JS/MJS syntax: 55 PASS
+TS/TSX parser checks: 102 PASS
+Conversion-service tests: 5/5 PASS
+Root public-registry resolved URLs: 464/464 PASS
+Backend byte identity: 68/68 PASS
+Tools/routes: 32/33 preserved
+CMD CRLF/BOM: PASS
+Batch labels/targets: PASS
+Favicon ICO: PASS
+Docker volume deletion commands: none
+Automatic audit remediation commands: none
+Windows/Docker/Word acceptance: pending user execution

@@ -1,0 +1,10 @@
+NovaPDF Step 14.15 backend byte identity
+
+Reference: supplied NovaPDF v0.14.14 source backend
+Reference files: 68
+Step 14.15 files: 68
+Added: 0
+Removed: 0
+Changed: 0
+Result: PASS - byte-identical
+Aggregate path/hash digest: 4dd8b21ade9c1cadf6b3201d326ba51c82e2e11f5e5ca88a9d233dce420970b7

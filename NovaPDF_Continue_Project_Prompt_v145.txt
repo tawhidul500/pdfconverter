@@ -1,0 +1,1 @@
+Continue NovaPDF from the v0.14.5 full handoff. Read NovaPDF_Master_Project_Handoff_v145.md, RELEASE_NOTES_0.14.5.md, VALIDATION_REPORT_STEP_14_5.md, and WINDOWS_VALIDATION_STEP_14_5.md before changing source. Complete Windows validation first. Preserve all locked constraints and keep Request Signatures disabled until the final major feature.

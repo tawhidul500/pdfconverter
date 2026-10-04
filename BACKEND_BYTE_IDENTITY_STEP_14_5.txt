@@ -1,0 +1,4 @@
+NovaPDF Step 14.5 backend byte-identity result
+
+68/68 backend files are byte-for-byte identical to the v0.14.4 input package.
+No Step 12.8 backend source, migration, configuration, test, or lockfile was changed.

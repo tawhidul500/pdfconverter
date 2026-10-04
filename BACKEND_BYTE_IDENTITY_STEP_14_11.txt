@@ -1,0 +1,5 @@
+Step 12.8 backend byte identity: PASS
+Compared with NovaPDF Step 14.10 backend.
+Files compared: 68
+Changed files: 0
+The Request Signatures backend remains frozen.

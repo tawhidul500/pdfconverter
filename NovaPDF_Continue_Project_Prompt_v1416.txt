@@ -1,0 +1,33 @@
+Continue NovaPDF from v0.14.16 Editable Layout Object Parity Corrective.
+
+Authoritative folder: NovaPDF_v0.14.16_Editable_Layout_Object_Parity_Corrective
+
+Read first:
+- NovaPDF_Master_Project_Handoff.md
+- PROJECT_STATUS.md
+- RELEASE_NOTES_0.14.16.md
+- VALIDATION_REPORT_STEP_14_16.md
+- WINDOWS_VALIDATION_STEP_14_16.md
+- HANDOFF_DOCUMENT_AUDIT_STEP_14_16.md
+- DOCX_NATIVE_OBJECT_AUDIT_STEP_14_16.txt
+
+Preserve:
+- actual v0.14.16 source; do not rebuild the project;
+- all 38 dependency-free source contracts;
+- 12 dependency-backed PDF-engine test definitions;
+- 32 tools / 33 public routes;
+- PDF-to-Word visual, hybrid, and editable modes;
+- no page-sized background picture for native Editable layout pages;
+- cropped unsupported residual artwork only;
+- raw-font trait detection, text-object color fallback, Word font-script and bCs/iCs properties;
+- rectangle-cell and line-grid Word table reconstruction;
+- supported Word shape and anchored picture reconstruction;
+- English/Bangla OCR and OCR deduplication;
+- exact allowedDevOrigins;
+- stable novapdf-local Docker project and all Docker volumes;
+- byte-identical 68-file backend;
+- Request Signatures as the final deferred feature.
+
+Never run npm audit fix --force. Do not delete Docker volumes. Keep UI claims exact: native digital PDFs should not carry a page-sized source image in Editable layout; only reconstructable objects become native Word objects; raster pictures remain editable picture objects, not vector primitives; scans and unsupported complex structures retain visual artwork.
+
+Before new feature work, run RUN_NOVAPDF_ALL.cmd on Windows and complete WINDOWS_VALIDATION_STEP_14_16.md in Microsoft Word. After acceptance, the next recommended roadmap tool is PDF to PowerPoint.

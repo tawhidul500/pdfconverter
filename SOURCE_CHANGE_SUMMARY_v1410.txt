@@ -1,0 +1,14 @@
+NovaPDF v0.14.10 source change summary
+
+Changed:
+- RUN_NOVAPDF_ALL.cmd: CRLF-only bytes, inline startup dependency checks, Step 14.10 metadata/checklist.
+- START_PDF_CONVERTER.cmd: CRLF-only bytes.
+- package/service/footer version metadata.
+- source-contract successor ranges and new raw-byte CMD regression contract.
+- Step 14.10 handoff/release/running/validation documentation.
+
+Preserved:
+- PDF-to-Word/OCR application and conversion logic.
+- all 32 tools and 33 routes.
+- Step 12.8 backend behavior and protected Docker volumes.
+- exact allowed development origins and no-forced-audit-fix policy.

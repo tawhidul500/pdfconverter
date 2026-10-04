@@ -1,0 +1,13 @@
+NOVAPDF v0.14.16 - START HERE
+
+1. Extract the runnable source to a fresh folder such as C:\NovaPDF-v1416.
+2. Start Docker Desktop.
+3. Double-click RUN_NOVAPDF_ALL.cmd.
+4. Confirm: NovaPDF v0.14.16 consolidated one-click runner.
+5. Open PDF to Word and select Editable layout (Beta).
+6. Verify no page-sized original PDF exists behind native editable objects.
+7. Verify font size/color/bold/italic and text position are close to the source PDF.
+8. Verify tables, supported shapes, and pictures are independently selectable/editable.
+9. Complete WINDOWS_VALIDATION_STEP_14_16.md.
+
+Do not run npm audit fix --force. Do not delete Docker volumes. Request Signatures remains deferred.

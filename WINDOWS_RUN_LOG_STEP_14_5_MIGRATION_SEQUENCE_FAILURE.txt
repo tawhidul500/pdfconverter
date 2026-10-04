@@ -1,0 +1,23 @@
+NovaPDF v0.14.5 Windows run — authoritative gate summary
+
+PASSED BEFORE FAILURE
+- Docker infrastructure and PDF converter health.
+- 5/5 PDF-to-Word converter/OCR tests.
+- Root clean install and audit capture.
+- Root ESLint.
+- Root semantic TypeScript.
+- 27/27 source contracts.
+- 12/12 PDF-engine tests.
+- Next.js production build.
+- Backend clean install and audit capture.
+- Backend ESLint, TypeScript, build, unit tests, and runtime metadata test.
+
+FAILURE
+[ ] CreateSignatureRequestBackend1721800000000
+[ERROR] The committed Step 12.8 migration was not shown as applied.
+[FAILED] Showing the committed PostgreSQL migration
+
+ROOT CAUSE
+The database was fresh. The runner required migration:show to report [X] before it executed migration:run. Step 14.6 changes the order to apply -> show [X] -> second idempotency run with no pending migrations.
+
+Docker volumes were not deleted. No forced npm audit fix was run.

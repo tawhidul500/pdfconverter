@@ -1,0 +1,21 @@
+Continue NovaPDF from the complete v0.14.0 Build Step 14.0 package.
+
+Before coding, read the complete NovaPDF_Master_Project_Handoff_v140.md, NovaPDF_All_Tools_Options.md, RELEASE_NOTES_0.14.0.md, VALIDATION_REPORT_STEP_14_0.md, and WINDOWS_VALIDATION_STEP_14_0.md, then inspect the actual source. Do not rebuild from assumptions.
+
+Current v0.14.0 candidate state:
+- PDF to Word has a dedicated frontend workspace instead of the generic placeholder;
+- multi-PDF validation, first-page previews, source navigation, page ranges, layout priority, separate/combined DOCX choices, naming, file transfer, Start over, home reset, and shared viewer modes are implemented;
+- the DOCX engine is intentionally not connected, no fake download exists, OCR is visibly deferred, and PDF to Word is not Working;
+- all 23 dependency-free source contracts pass in packaging;
+- all existing engines, 32 tools, 33 routes, NovaPDF design, viewer lifecycle, right-side panels, and Step 12.8 backend are preserved;
+- Request Signatures is deferred until the final major feature milestone and remains disabled/not Working.
+
+Next actions:
+1. Extract without deleting Docker volumes.
+2. Double-click RUN_NOVAPDF_ALL.cmd.
+3. Confirm public-registry clean install, audits, lint, semantic TypeScript, 23 contracts, 11 engine tests, production build, backend gates, migration, health, 33 routes, and local E2E.
+4. Complete every item in WINDOWS_VALIDATION_STEP_14_0.md, especially zero viewer portals before upload, exactly one after upload, page-range/layout/output controls, no fake DOCX, no stale toolbar after switching, and Start over returning portal count to zero.
+5. Keep PDF to Word classified as Frontend candidate until a real DOCX engine and full validation exist.
+6. Continue the frontend-first sequence with the next registry-order frontend tool after this candidate is accepted. Request Signatures remains last.
+
+Preserve all 32 tools, existing engines, NovaPDF design, right-side panels, preview behavior, page-view modes, file transfer, Start over, home reset, allowedDevOrigins: ["172.24.48.1", "172.21.32.1"], public npm registry URLs only, and the updated one-click runner. Do not use npm audit fix --force.

@@ -1,0 +1,4 @@
+NovaPDF v0.14.14 backend byte identity
+
+68/68 files in backend/ are byte-for-byte identical to NovaPDF v0.14.12.
+Request Signatures remains disabled and deferred.

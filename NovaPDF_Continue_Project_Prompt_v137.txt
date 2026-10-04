@@ -1,0 +1,21 @@
+Continue NovaPDF from `NovaPDF_Project_Handoff_v137_Viewer_Visibility_Duplicate_Portal_Corrective_Full.zip` and `NovaPDF_Build_Step_13_7_Viewer_Visibility_Duplicate_Portal_Corrective.zip`.
+
+Before coding, read the complete `NovaPDF_Master_Project_Handoff_v137.md`, `NovaPDF_All_Tools_Options.md`, `RELEASE_NOTES_0.13.7.md`, `VALIDATION_REPORT_STEP_13_7.md`, and `WINDOWS_VALIDATION_STEP_13_7.md`, then inspect the actual source. Do not rebuild from assumptions.
+
+Current v0.13.7 candidate state:
+- the shared viewer is opt-in and hidden workspaces cannot create body portals;
+- generic upload screens show no viewer until a file is accepted in the active tool;
+- the duplicate multi-portal shadow/spot is removed;
+- Continuous, Single-page, Two-page, and Three-page modes remain preserved after upload;
+- all 22 dependency-free source contracts and all 92 TypeScript/TSX syntax checks passed in packaging;
+- the Step 12.8 backend remains byte-for-byte unchanged across 68 files;
+- Request Signatures remains disabled and is not Working.
+
+Next actions:
+1. Extract the Step 13.7 package without deleting Docker volumes.
+2. Double-click `RUN_NOVAPDF_ALL.cmd`.
+3. Confirm root clean install, audit capture, lint, TypeScript, 22 contracts, 11 PDF-engine tests, production build, backend gates, migration, health, 33 routes, and local E2E.
+4. Complete every item in `WINDOWS_VALIDATION_STEP_13_7.md`, especially zero viewer portals before upload, exactly one after upload, no shadow spot, no stale toolbar after tool switching, and Start over returning the portal count to zero.
+5. Do not begin Step 12.9 or mark Request Signatures Working until the complete automated, manual, controlled-security, and production-provider delivery sequence passes.
+
+Preserve all 32 tools, existing engines, NovaPDF design, right-side panels, preview behavior, page-view modes, file transfer, Start over, home reset, `allowedDevOrigins: ["172.24.48.1", "172.21.32.1"]`, public npm registry URLs only, and the updated one-click runner. Do not use `npm audit fix --force`.

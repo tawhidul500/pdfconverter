@@ -1,0 +1,25 @@
+Continue NovaPDF from `NovaPDF_Project_Handoff_v133_Shared_Controls_Checkbox_Edit_Alignment_Full.zip` and `NovaPDF_Build_Step_13_3_Shared_Controls_Checkbox_Edit_Alignment.zip`.
+
+Before coding, read the complete `NovaPDF_Master_Project_Handoff_v133.md`, `NovaPDF_All_Tools_Options.md`, `WINDOWS_VALIDATION_STEP_13_3.md`, and inspect the actual source. Do not rebuild from assumptions.
+
+Current v0.13.3 implementation state:
+- 32 tools and 33 routes are preserved;
+- twelve browser-local workspaces are implemented, with Edit PDF still an acceptance candidate;
+- all implemented tools use the bottom-center NovaPDF page/zoom/view bar;
+- session Undo/Redo retains checkpoints back to the first recorded post-load state;
+- tool-appropriate keyboard shortcuts are wired across implemented tools;
+- localhost:3000 opens the homepage and Home actions return to `/`;
+- Sign PDF checkbox tick/fill/stroke/width/size settings and proportional export are implemented;
+- Edit PDF Sign-style move/resize and live alignment guides are implemented;
+- 18 dependency-free source contracts pass, including the 91-check Step 13.3 contract;
+- the Step 12.8 backend is unchanged; Request Signatures remains disabled and not Working.
+
+Next required actions:
+1. Extract without deleting Docker volumes.
+2. Double-click `RUN_NOVAPDF_ALL.cmd`.
+3. Require all root/backend clean-install, lint, semantic TypeScript, build, test, migration, health, route, and local E2E gates to pass.
+4. Complete every manual Chrome item in `WINDOWS_VALIDATION_STEP_13_3.md`.
+5. Complete controlled root security regression and real production-provider delivery/webhook/storage verification.
+6. Do not begin Step 12.9 or mark Request Signatures Working before all gates pass.
+
+Preserve the NovaPDF design, right-side panels, preview behavior, active-neighborhood rendering, 50-200% zoom, file transfer, Start over, home reset, exact `allowedDevOrigins: ["172.24.48.1", "172.21.32.1"]`, public npm registry URLs, Docker volumes, and the updated one-click runner. Never use `npm audit fix --force`.

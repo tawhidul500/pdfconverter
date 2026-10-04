@@ -1,0 +1,8 @@
+Step 14.6 source changes:
+- Corrected RUN_NOVAPDF_ALL.cmd so migration:run occurs before migration:show requires [X].
+- Added a second migration:run idempotency check requiring No migrations are pending.
+- Added separate migration apply/show/confirmation logs.
+- Corrected the runner to open the current Step 14.6 validation checklist.
+- Updated current release identifiers to 0.14.6.
+- Added the Step 14.6 regression contract and handoff documents.
+- Preserved PDF to Word/OCR behavior and kept all 68 Step 12.8 backend source files unchanged.

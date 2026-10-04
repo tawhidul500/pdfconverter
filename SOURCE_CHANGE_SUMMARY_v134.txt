@@ -1,0 +1,36 @@
+NovaPDF v0.13.4 source change summary
+
+Shared interaction geometry:
+- reusable page/object edge and center snapping
+- reusable Shift-drag proportional resize constraint
+- reusable SVG alignment guides, four-side distance rulers, and width/height labels
+
+Sign PDF:
+- shared edge/center snapping
+- live rulers and distance measurements during move and resize
+- Shift+drag aspect-ratio preservation for every field
+
+Edit PDF:
+- shared edge/center snapping
+- live rulers and distance measurements during move and resize
+- Shift+drag aspect-ratio preservation for every resizable object
+
+Watermark PDF:
+- offset-preserving drag
+- page and peer-watermark snapping
+- live rulers and distance measurements
+
+Crop PDF:
+- page-anchor snapping while moving
+- live rulers, margins, and dimensions during move/resize
+- Shift+drag current-ratio preservation from all eight handles
+
+Preserved:
+- all 32 tools and 33 routes
+- bottom viewer, full session history, keyboard behavior, homepage routing, Sign checkbox controls, and Edit PDF engine
+- Step 12.8 backend unchanged
+- Request Signatures disabled/not Working
+- Docker volumes untouched
+- public npm registry project URLs
+- exact allowedDevOrigins values
+- one-click Windows runner requirement

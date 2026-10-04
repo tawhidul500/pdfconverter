@@ -1,0 +1,32 @@
+NovaPDF v0.13.2 Step 13.2 one-click Windows runner source package
+Date: July 30, 2026
+
+Primary execution file:
+- RUN_NOVAPDF_ALL.cmd
+
+Authoritative current files:
+- NovaPDF_Master_Project_Handoff_v132.md
+- NovaPDF_All_Tools_Options.md
+- NovaPDF_Continue_Project_Prompt_v132.txt
+- WINDOWS_VALIDATION_STEP_13_2.md
+- RUNNING_NOVAPDF_0.13.2.md
+- VALIDATION_REPORT_STEP_13_2.md
+- RELEASE_NOTES_0.13.2.md
+- PROJECT_STATUS.md
+- README.md
+- CHANGELOG.md
+
+Validation automation:
+- root public-registry clean install, audit, lint, TypeScript, 17 contracts, 11 engines, build
+- backend fresh public lock, clean install, audit, lint, TypeScript, build, unit and metadata tests
+- applied migration and no-pending-migration verification
+- separate Web/API/Worker CMD windows
+- API live/ready, 33 routes, and real local sequential two-recipient E2E
+- browser/manual checklist opening and timestamped validation logs
+
+Release boundary:
+- manual Chrome acceptance remains required
+- production-provider delivery remains credential-dependent
+- Request signatures remains disabled and not Working
+- Docker volumes must not be deleted
+- npm audit fix --force is forbidden

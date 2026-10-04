@@ -1,0 +1,5 @@
+Continue NovaPDF from NovaPDF_Project_Handoff_v147_Windows_Node24_Dev_Launcher_Corrective_Full.zip and NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective.zip.
+
+Read NovaPDF_Master_Project_Handoff_v147.md, RELEASE_NOTES_0.14.7.md, VALIDATION_REPORT_STEP_14_7.md, WINDOWS_VALIDATION_STEP_14_7.md, and the actual source before changing code.
+
+Windows validation already passed converter/OCR, root lint/TypeScript/contracts/12 engine tests/build, and backend compile/tests. Step 14.6 corrected migration sequencing. Step 14.7 fixes Node.js v24 Windows `spawn EINVAL` by executing the installed Next.js JavaScript CLI with `process.execPath` instead of directly spawning `npx.cmd`. Do not delete volumes or use npm audit fix --force. Request Signatures remains disabled and must be implemented last.

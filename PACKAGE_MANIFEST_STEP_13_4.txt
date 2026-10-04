@@ -1,0 +1,43 @@
+NovaPDF Build Step 13.4 package manifest
+
+Primary source:
+- src/
+- public/
+- backend/ (preserved unchanged from v0.13.3)
+- test-files/
+- package.json
+- package-lock.json
+- docker-compose.yml
+- next.config.ts
+- tsconfig.json
+- eslint.config.mjs
+
+Shared interaction implementation:
+- src/lib/workspace-interaction-guides.ts
+- src/components/workspace-interaction-overlay.tsx
+- Sign PDF, Edit PDF, Watermark PDF, and Crop PDF integrations
+
+Execution:
+- RUN_NOVAPDF_ALL.cmd
+- RUNNING_NOVAPDF_0.13.4.md
+- WINDOWS_VALIDATION_STEP_13_4.md
+
+Handoff and evidence:
+- NovaPDF_Master_Project_Handoff_v134.md
+- NovaPDF_Continue_Project_Prompt_v134.txt
+- NovaPDF_All_Tools_Options.md
+- RELEASE_NOTES_0.13.4.md
+- VALIDATION_REPORT_STEP_13_4.md
+- SOURCE_CHANGE_SUMMARY_v134.txt
+- PROJECT_STATUS.md
+- README.md
+- CHANGELOG.md
+
+Required preservation:
+- 32 tools and 33 root routes
+- Step 12.8 backend unchanged
+- Request Signatures disabled and not Working
+- public npm registry URLs only
+- exact allowedDevOrigins values
+- Docker volumes preserved
+- no npm audit fix --force

@@ -1,0 +1,21 @@
+NovaPDF v0.14.14 source changes
+
+Changed:
+- conversion-service/app/converter.py
+- conversion-service/app/main.py
+- conversion-service/requirements.txt
+- conversion-service/tests/test_converter.py
+- conversion-service/tests/fixtures/complex-layout.pdf
+- conversion-service/tests/fixtures/complex-layout-scan.pdf
+- src/components/pdf-to-word-workspace.tsx
+- src/lib/pdf-to-word-service.ts
+- src/components/home-page.tsx
+- package.json / package-lock version metadata
+- runner/version/checklist documentation
+- new Step 14.14 source contract
+
+Unchanged:
+- all 68 frozen backend files
+- Request Signatures status
+- existing non-PDF-to-Word tool engines
+- Docker volume safety policy

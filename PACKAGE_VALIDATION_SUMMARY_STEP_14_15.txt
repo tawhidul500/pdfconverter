@@ -1,0 +1,11 @@
+NovaPDF v0.14.15 package validation summary
+
+- Runnable source prepared from supplied v0.14.14 source: PASS
+- Python compile: PASS
+- Converter tests: PASS 11/11
+- Source contracts: PASS 37/37
+- Route manifest: PASS 32 tools / 33 routes
+- Backend byte identity: PASS 68/68
+- DOCX structural and LibreOffice render QA: PASS
+- ZIP integrity and SHA-256 manifests: generated at packaging
+- Windows Docker/Microsoft Word acceptance: PENDING

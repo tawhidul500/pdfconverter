@@ -1,0 +1,16 @@
+NovaPDF Step 14.8 package validation summary
+
+- Real v0.14.7 Windows evidence passed converter/OCR, root ESLint/TypeScript, 29 source contracts, all 12 PDF-engine tests, production build, backend gates, and the actual migration transaction.
+- 30/30 dependency-free source contracts passed after the corrective.
+- Step 14.8 migration parser source checks: 11/11 passed.
+- Migration parser functional fixtures: 5/5 passed (current TypeORM counter format, legacy format, ANSI format, pending rejection, wrong-name rejection).
+- The parser accepted the complete supplied Windows log containing `[X] 1 CreateSignatureRequestBackend1721800000000`.
+- 52 MJS syntax checks passed.
+- Python source syntax checks passed.
+- PDF-to-Word converter/OCR service tests: 5/5 passed.
+- 101/101 TypeScript/TSX files are byte-for-byte unchanged from the Windows-validated Step 14.7 package.
+- 68/68 backend files are byte-for-byte unchanged from Step 14.7.
+- 464/464 package-lock resolved URLs use the public npm registry.
+- Exact allowedDevOrigins preserved.
+- No Docker-volume deletion command and no automatic npm audit fix.
+- Request Signatures remains disabled and deferred.

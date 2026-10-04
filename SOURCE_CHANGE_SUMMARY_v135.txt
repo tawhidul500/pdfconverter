@@ -1,0 +1,31 @@
+NovaPDF v0.13.5 source change summary
+
+Grounded base:
+- NovaPDF_Build_Step_13_4_Shared_Guides_Aspect_Resize.zip
+- Real Windows output from RUN_NOVAPDF_ALL.cmd
+
+Application source changes:
+1. src/components/edit-pdf-workspace.tsx
+   - Deferred the workspace activation status reset through requestAnimationFrame.
+2. src/components/workspace-zoom-controls.tsx
+   - Deferred controlled current-page synchronization through requestAnimationFrame.
+3. src/components/split-pdf-workspace.tsx
+   - Moved the file-transfer effect below resetFields/loadPdf.
+   - Moved the keyboard effect below splitPdf.
+4. src/components/sign-pdf-workspace.tsx
+   - Removed the unused focusSelectedTextEditor helper.
+
+Validation and release changes:
+- package.json and package-lock.json version 0.13.5
+- RUN_NOVAPDF_ALL.cmd updated for v0.13.5
+- Added test-step-13-5-windows-runner-eslint-corrective.mjs
+- Source contract count increased from 19 to 20
+- Added v0.13.5 running, validation, release, report, handoff, and continuation files
+
+Preserved:
+- Complete backend and migration state
+- 32 tools and 33 routes
+- 12 implemented browser workspaces
+- Shared viewer, history, keyboard, snap guides, rulers, distances, and Shift-resize behavior
+- Docker volumes
+- Request Signatures disabled/not Working boundary

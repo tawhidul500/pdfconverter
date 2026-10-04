@@ -1,0 +1,39 @@
+NovaPDF Build Step 14.2 — Source Change Summary
+
+Added:
+- conversion-service/Dockerfile
+- conversion-service/requirements.txt
+- conversion-service/app/__init__.py
+- conversion-service/app/main.py
+- conversion-service/app/converter.py
+- conversion-service/tests/test_converter.py
+- src/lib/pdf-to-word-service.ts
+- test-files/test-step-14-2-pdf-to-word-service-ocr.mjs
+- RELEASE_NOTES_0.14.2.md
+- VALIDATION_REPORT_STEP_14_2.md
+- WINDOWS_VALIDATION_STEP_14_2.md
+- RUNNING_NOVAPDF_0.14.2.md
+- NovaPDF_Master_Project_Handoff_v142.md
+- NovaPDF_Continue_Project_Prompt_v142.txt
+
+Updated:
+- PDF to Word workspace: service health, scan analysis, No OCR/OCR, language selection, service conversion, DOCX validation, and Word-safe downloads
+- Docker Compose: added stateless pdf-converter service on port 4010
+- one-click runner: converter build/start/health/tests and Step 14.2 checklist
+- package version and release documentation
+- historical source contracts to accept the v0.14.2 successor
+
+Preserved:
+- Step 12.8 backend source
+- 32 tools and 33 routes
+- existing workspaces and engines
+- viewer lifecycle and exact allowed development origins
+- Docker volumes and audit safety
+- Request Signatures disabled/final-feature boundary
+
+Final corrective refinements:
+- replaced PyMuPDF with permissively licensed pypdfium2/PDFium
+- added digital, mixed-orientation, and Bangla OCR fixtures
+- added English and Bangla OCR regression tests
+- added RFC 5987-safe Unicode output filenames
+- verified combined files and custom page selection

@@ -1,0 +1,11 @@
+NovaPDF v0.14.14 source change summary
+
+Changed:
+- conversion-service/app/converter.py
+- conversion-service/tests/test_converter.py
+- src/components/pdf-to-word-workspace.tsx
+- release/version metadata, runner checklist, and source contracts
+
+Unchanged:
+- frozen Step 12.8 backend application source
+- existing PDF tools and Request Signatures state

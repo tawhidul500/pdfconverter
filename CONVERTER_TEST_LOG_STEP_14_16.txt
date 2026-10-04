@@ -1,0 +1,16 @@
+test_editable_native_pdf (test_converter.ConverterTests.test_editable_native_pdf) ... ok
+test_hybrid_line_grid_tables_are_native_and_background_is_clean (test_converter.ConverterTests.test_hybrid_line_grid_tables_are_native_and_background_is_clean) ... ok
+test_hybrid_native_layout_uses_editable_positioned_text (test_converter.ConverterTests.test_hybrid_native_layout_uses_editable_positioned_text) ... ok
+test_hybrid_scanned_layout_uses_visible_ocr_textboxes (test_converter.ConverterTests.test_hybrid_scanned_layout_uses_visible_ocr_textboxes) ... ok
+test_mixed_orientation_sections (test_converter.ConverterTests.test_mixed_orientation_sections) ... ok
+test_preserve_layout_pdf (test_converter.ConverterTests.test_preserve_layout_pdf) ... ok
+test_preserve_layout_with_bangla_ocr_search_layer (test_converter.ConverterTests.test_preserve_layout_with_bangla_ocr_search_layer) ... ok
+test_preserve_layout_with_native_search_layer (test_converter.ConverterTests.test_preserve_layout_with_native_search_layer) ... ok
+test_preserve_layout_with_scanned_ocr_search_layer (test_converter.ConverterTests.test_preserve_layout_with_scanned_ocr_search_layer) ... ok
+test_scanned_pdf_bangla_ocr (test_converter.ConverterTests.test_scanned_pdf_bangla_ocr) ... ok
+test_scanned_pdf_ocr (test_converter.ConverterTests.test_scanned_pdf_ocr) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 4.505s
+
+OK

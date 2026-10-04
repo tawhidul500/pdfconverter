@@ -1,0 +1,13 @@
+NovaPDF Step 14.11 source change summary
+
+- Added exact current-version endpoint.
+- Added stable Docker Compose project name.
+- Added safe Windows stale-process and legacy-container preflight.
+- Runner now launches fresh production Web/API/Worker processes and verifies Web 0.14.11.
+- Development launcher rejects stale or duplicate port-3000 servers.
+- Replaced dynamic footer build snapshot with deterministic static build metadata.
+- Added valid favicon.ico.
+- Added stable converter-only repair preflight.
+- Added Step 14.11 source contract and updated historical successor contracts.
+- Added consolidated handoff, validation, defect ledger, and Windows checklist.
+- Step 12.8 backend unchanged.

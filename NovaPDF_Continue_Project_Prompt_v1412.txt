@@ -1,0 +1,1 @@
+Continue NovaPDF from NovaPDF v0.14.12. Read the v0.14.12 handoff, release notes, validation report, Windows checklist, and actual source before coding. Preserve the service-backed PDF-to-Word/OCR tool and the structured Windows service launchers. Do not delete Docker volumes, do not use npm audit fix --force, and keep Request Signatures disabled until the final major feature.

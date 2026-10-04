@@ -1,0 +1,31 @@
+Continue NovaPDF from `NovaPDF_Project_Handoff_v132_One_Click_Windows_Runner_Full.zip` and `NovaPDF_Build_Step_13_2_One_Click_Windows_Runner.zip`.
+
+Before coding, read the complete `NovaPDF_Master_Project_Handoff_v132.md`, `NovaPDF_All_Tools_Options.md`, `WINDOWS_VALIDATION_STEP_13_2.md`, and inspect the actual source. Do not rebuild from assumptions.
+
+Current grounded state:
+- v0.13.1 Sign PDF corrective implementation is preserved;
+- Edit PDF remains a real Step 13 implementation candidate;
+- all 32 tools, 33 routes, eleven previously proven engines, current design, right-side panels, preview behavior, one-way canvas controller, lazy active-neighborhood previews, 50-200% zoom, file transfer, Start over, home reset, exact allowedDevOrigins, and public npm URLs remain;
+- Request signatures remains disabled and is not Working;
+- Docker volumes must never be deleted;
+- `npm audit fix --force` must never be used.
+
+Step 13.2 adds `RUN_NOVAPDF_ALL.cmd`. This is now a mandatory handoff invariant. For every future version, update this same project-root one-click runner so the user can double-click one file and automatically:
+1. start/check Docker Desktop and local PostgreSQL, Redis, MinIO, and Mailpit without deleting volumes;
+2. preserve an existing backend `.env`;
+3. run root public-registry clean install, audit capture, lint, TypeScript, source contracts, PDF-engine tests, and build;
+4. generate a fresh backend public-registry lock, clean install, audit, lint, TypeScript, build, tests, metadata, migration show/run;
+5. open separate persistent Web, API, and Worker CMD windows;
+6. verify live/ready health, all HTTP routes, and the real local E2E;
+7. open required browser pages and the version-specific manual checklist;
+8. capture timestamped logs.
+
+Do not claim that the runner automates visual Chrome acceptance or production-provider delivery; those remain human/credential-dependent gates.
+
+Immediate next order:
+1. Execute `RUN_NOVAPDF_ALL.cmd` on Windows and retain `validation-logs`.
+2. Complete the Sign PDF corrective checklist and Edit PDF checklist.
+3. Complete controlled root security regression and selected production-provider delivery/webhook verification.
+4. Do not begin Step 12.9 UI integration or mark Request signatures Working until every gate passes.
+
+Continue conversation with the user in Bangla. Keep all NovaPDF website/UI content in US English.

@@ -1,0 +1,16 @@
+Continue NovaPDF from v0.14.14 STABLE Editable Layout Reconstruction.
+
+Authoritative folder: NovaPDF_v0.14.14_STABLE
+
+Preserve:
+- all 36 source contracts;
+- PDF-to-Word visual, hybrid, and editable modes;
+- English/Bangla OCR;
+- v0.14.12 Windows launch stability;
+- stable Docker project novapdf-local;
+- exact allowedDevOrigins;
+- frozen Step 12.8 backend;
+- Docker volumes;
+- Request Signatures as the final deferred feature.
+
+Never run npm audit fix --force. Every regular tool must be functional end-to-end. Next roadmap tool after v0.14.14 acceptance: PDF to PowerPoint.

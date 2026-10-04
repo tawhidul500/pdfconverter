@@ -1,0 +1,9 @@
+Observed Step 14.9 Windows failure
+
+[OK] Node.js found.
+[OK] npm found.
+The system cannot find the batch label specified - require_command
+
+[FAILED] Checking PowerShell
+
+Root cause: the Step 14.9 `.cmd` files were packaged with bare LF line endings while Step 14.7/14.8 used Windows CRLF. The label existed in source; Windows CMD label resolution failed during repeated subroutine calls.

@@ -1,0 +1,37 @@
+NovaPDF Step 14.16 DOCX native-object audit
+
+Line-grid sample: NovaPDF_v0.14.16_Editable_Layout_Object_Parity_Line_Grid_Sample.docx
+- Valid DOCX ZIP: yes
+- Real Word tables: 2 (4x2, 4x4)
+- VML shape nodes: 9
+- Editable text-box contents: 9
+- DrawingML anchors: 1
+- Picture nodes: 1
+- Media files: 1
+  - word/media/image1.png: 181x80 RGBA
+- Hidden w:vanish nodes: 0
+- Full-page/background anchors (behindDoc=1): 0
+- Bold markers: 91
+- Italic markers: 48
+- Color markers: 33
+
+Complex sample: NovaPDF_v0.14.16_Editable_Layout_Object_Parity_Complex_Sample.docx
+- Valid DOCX ZIP: yes
+- Real Word tables: 1 (4x3)
+- VML shape nodes: 22
+- Editable text-box contents: 22
+- DrawingML anchors: 1
+- Picture nodes: 1
+- Media files: 1
+  - word/media/image1.png: 261x121 RGBA
+- Hidden w:vanish nodes: 0
+- Full-page/background anchors (behindDoc=1): 0
+- Bold markers: 52
+- Italic markers: 24
+- Color markers: 34
+
+Interpretation:
+- Both native-PDF samples contain no page-sized background picture and no behind-document anchor.
+- Each media file is the independently extracted embedded PDF picture, not a raster copy of the PDF page.
+- Tables, supported shapes, pictures, and positioned text are independent Word objects.
+- Microsoft Word on Windows acceptance remains required because LibreOffice and Word may differ in anchored/VML layout.

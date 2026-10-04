@@ -1,0 +1,17 @@
+NovaPDF Build Step 14.1 package validation summary
+Version: 0.14.1
+Dependency-free source contracts: 23/23 passed
+Step 14.1 source checks: 24/24 passed
+MJS syntax: 40 files passed
+TypeScript/TSX syntax: 90 files passed
+JSON parsed: 7 files
+Root resolved registry URLs: 464
+Non-public resolved registry URLs: 0
+Exact allowedDevOrigins preserved: True
+Executable Docker volume-delete commands: 0
+Executable npm audit-fix commands: 0
+Backend byte identity: 68/68 files unchanged
+PDF to Word engine fixture test: passed before clean packaging
+python-docx opening: editable and preserve-layout fixtures passed
+LibreOffice rendering: editable 1 page; preserve-layout 2 pages passed
+Clean npm ci / lint / full semantic TypeScript / full 12-engine suite / production build: pending Windows because registry access failed with EAI_AGAIN in sandbox

@@ -1,0 +1,9 @@
+NovaPDF Step 14.16 backend byte-identity audit
+
+Baseline: NovaPDF_v0.14.15_Editable_Native_Objects_Corrective/backend
+Candidate: NovaPDF_v0.14.16_Editable_Layout_Object_Parity_Corrective/backend
+Baseline files: 68
+Candidate files: 68
+Byte-identical files: 68
+Differences: 0
+Result: PASS - all backend files are byte-identical.

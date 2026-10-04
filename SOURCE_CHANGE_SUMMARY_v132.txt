@@ -1,0 +1,31 @@
+NovaPDF v0.13.2 Step 13.2 source change summary
+Date: July 30, 2026
+
+Added:
+- RUN_NOVAPDF_ALL.cmd
+- WINDOWS_VALIDATION_STEP_13_2.md
+- RUNNING_NOVAPDF_0.13.2.md
+- RELEASE_NOTES_0.13.2.md
+- VALIDATION_REPORT_STEP_13_2.md
+- test-files/test-step-13-2-one-click-runner.mjs
+
+Updated:
+- package.json and package-lock.json to 0.13.2
+- test-files/run-source-contracts.mjs to 17 contracts
+- README.md
+- PROJECT_STATUS.md
+- CHANGELOG.md
+- NovaPDF_All_Tools_Options.md
+- NovaPDF_Master_Project_Handoff_v132.md
+- NovaPDF_Continue_Project_Prompt_v132.txt
+
+Application behavior:
+- No Sign PDF, Edit PDF, shared UI, route, or backend implementation source was changed.
+- The v0.13.2 change is delivery and validation automation only.
+
+Safety:
+- Docker volumes are preserved.
+- Existing backend .env is preserved.
+- Public npm registry URLs only.
+- No npm audit fix or forced fix.
+- Request signatures remains disabled and not Working.

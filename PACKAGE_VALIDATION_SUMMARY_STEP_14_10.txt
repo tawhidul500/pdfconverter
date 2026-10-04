@@ -1,0 +1,18 @@
+NovaPDF Step 14.10 package validation summary
+
+- Root cause isolated to LF-only Windows `.cmd` bytes in Step 14.9; Step 14.7/14.8 used CRLF.
+- Both Windows command files are CRLF-only and BOM-free.
+- Startup dependency preflight is inline and no longer calls `:require_command`.
+- All 13 remaining `call`/`goto` targets resolve to existing line-anchored labels.
+- 32/32 dependency-free source contracts passed.
+- Step 14.10 raw-byte/source checks: 14/14 passed.
+- JavaScript/MJS syntax checks: 50 files passed.
+- TypeScript/TSX isolated transpilation: 41/41 files passed.
+- Python conversion-service syntax passed.
+- PDF-to-Word converter/OCR tests: 5/5 passed.
+- 68/68 backend files are byte-for-byte unchanged from Step 14.9.
+- 464/464 package-lock resolved URLs use the public npm registry.
+- Exact allowedDevOrigins preserved.
+- No Docker-volume deletion command and no automatic npm audit fix.
+- Full Windows clean install, semantic TypeScript, production build, backend runtime, routes, E2E, and manual Microsoft Word/OCR acceptance remain required.
+- Request Signatures remains disabled and deferred.

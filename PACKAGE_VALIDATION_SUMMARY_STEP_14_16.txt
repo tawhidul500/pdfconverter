@@ -1,0 +1,22 @@
+NovaPDF Step 14.16 package validation summary
+
+Release: NovaPDF v0.14.16 - Editable Layout Object Parity Corrective
+Basis: actual v0.14.15 source; no rebuild.
+
+Completed in Linux delivery environment:
+- Python compile: PASS
+- Converter functional tests: 11/11 PASS
+- Dependency-free source contracts: 38/38 PASS
+- Route manifest: 32 tools + homepage = 33 routes PASS
+- Backend byte identity: 68/68 PASS
+- Native sample DOCX structural audit: PASS
+- Native sample LibreOffice visual QA: PASS
+- Native samples contain no page-sized/background anchor: PASS
+- Master Handoff DOCX render QA: PASS (3 pages)
+- Master Handoff PDF render QA: PASS (3 pages)
+- Handoff document audit: PASS
+
+Pending Windows promotion gates:
+- dependency-backed clean installs, lint, TypeScript, 12 PDF-engine tests, build;
+- Docker services, backend, migration, live routes, and E2E;
+- Microsoft Word object interaction and visual acceptance.

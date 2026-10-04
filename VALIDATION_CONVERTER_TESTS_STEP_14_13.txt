@@ -1,0 +1,13 @@
+test_editable_native_pdf (tests.test_converter.ConverterTests.test_editable_native_pdf) ... ok
+test_mixed_orientation_sections (tests.test_converter.ConverterTests.test_mixed_orientation_sections) ... ok
+test_preserve_layout_pdf (tests.test_converter.ConverterTests.test_preserve_layout_pdf) ... ok
+test_preserve_layout_with_bangla_ocr_search_layer (tests.test_converter.ConverterTests.test_preserve_layout_with_bangla_ocr_search_layer) ... ok
+test_preserve_layout_with_native_search_layer (tests.test_converter.ConverterTests.test_preserve_layout_with_native_search_layer) ... ok
+test_preserve_layout_with_scanned_ocr_search_layer (tests.test_converter.ConverterTests.test_preserve_layout_with_scanned_ocr_search_layer) ... ok
+test_scanned_pdf_bangla_ocr (tests.test_converter.ConverterTests.test_scanned_pdf_bangla_ocr) ... ok
+test_scanned_pdf_ocr (tests.test_converter.ConverterTests.test_scanned_pdf_ocr) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.359s
+
+OK

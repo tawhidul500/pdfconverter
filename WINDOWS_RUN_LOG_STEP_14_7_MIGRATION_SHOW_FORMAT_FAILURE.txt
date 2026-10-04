@@ -1,0 +1,689 @@
+
+============================================================
+NovaPDF v0.14.7 one-click runner
+============================================================
+Project: C:\CNovaPDF-v145\NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective
+
+This runner will:
+  1. Use the public npm registry only.
+  2. Start Docker Desktop and local infrastructure when needed.
+  3. Build and validate the local PDF to Word conversion and OCR service.
+  4. Clean-install and validate the web application.
+  5. Generate a fresh backend public-registry lock and validate the backend.
+  6. Verify the committed PostgreSQL migration without deleting volumes.
+  7. Open separate Web, API, and Worker CMD windows.
+  8. Run converter health/tests, all 33 HTTP routes, and the real local backend E2E.
+  9. Open PDF to Word, proxy/converter health, Sign PDF, Edit PDF, Mailpit, MinIO, API docs, and the manual checklist.
+
+Docker volumes are preserved. This file never runs docker compose down -v.
+npm audit fix --force is never used.
+
+[OK] Node.js found.
+[OK] npm found.
+[OK] Windows PowerShell found.
+[OK] Docker Desktop / Docker CLI found.
+
+============================================================
+Starting Docker Desktop and local infrastructure
+============================================================
+Docker engine is ready.
+Existing backend\.env preserved.
+[+] up 7/7
+ ✔ Volume novapdf_build_step_14_7_windows_node24_dev_launcher_corrective_novapdf-minio    Created                   0.0s
+ ✔ Volume novapdf_build_step_14_7_windows_node24_dev_launcher_corrective_novapdf-postgres Created                   0.0s
+ ✔ Volume novapdf_build_step_14_7_windows_node24_dev_launcher_corrective_novapdf-redis    Created                   0.0s
+ ✔ Container novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-redis-1       Started                   1.8s
+ ✔ Container novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-minio-1       Started                   2.3s
+ ✔ Container novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-postgres-1    Started                   1.9s
+ ✔ Container novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-mailpit-1     Started                   2.1s
+#1 [internal] load local bake definitions
+#1 reading from stdin 793B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 30B 0.0s
+#2 transferring dockerfile: 843B 0.2s done
+#2 DONE 0.3s
+
+#3 [internal] load metadata for docker.io/library/python:3.12-slim-bookworm
+#3 ...
+
+#4 [auth] library/python:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.12-slim-bookworm
+#3 DONE 2.2s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 ...
+
+#7 [1/7] FROM docker.io/library/python:3.12-slim-bookworm@sha256:d50fb7611f86d04a3b0471b46d7557818d88983fc3136726336b2a4c657aa30b
+#7 resolve docker.io/library/python:3.12-slim-bookworm@sha256:d50fb7611f86d04a3b0471b46d7557818d88983fc3136726336b2a4c657aa30b 0.1s done
+#7 DONE 0.1s
+
+#6 [internal] load build context
+#6 transferring context: 5.87kB 0.3s done
+#6 DONE 0.3s
+
+#8 [2/7] RUN apt-get update     && apt-get install -y --no-install-recommends        tesseract-ocr        tesseract-ocr-eng        tesseract-ocr-ben        libglib2.0-0        libgl1     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [3/7] WORKDIR /service
+#9 CACHED
+
+#10 [4/7] COPY requirements.txt ./
+#10 CACHED
+
+#11 [5/7] RUN python -m pip install --index-url https://pypi.org/simple --requirement requirements.txt
+#11 CACHED
+
+#12 [6/7] COPY app ./app
+#12 DONE 0.1s                                                                                                                                                                                                                                   #13 [7/7] COPY tests ./tests                                                                                            #13 DONE 0.1s                                                                                                                                                                                                                                   #14 exporting to image                                                                                                  #14 exporting layers
+#14 exporting layers 0.3s done
+#14 exporting manifest sha256:1c1ef099523df959cb85a21d4535eb9f6de30b182b9c886571110ccdcc8bba28 0.0s done
+#14 exporting config sha256:7f38f0a60f21b0acaec9a56db2a3d69d8c9a02379d5caa6cd7539980af95a1f8 0.0s done
+#14 exporting attestation manifest sha256:cfb60f1df8843f82550b64647c6e77ec6cca9b5321e3abc09036acc26685cd17
+#14 exporting attestation manifest sha256:cfb60f1df8843f82550b64647c6e77ec6cca9b5321e3abc09036acc26685cd17 0.1s done
+#14 exporting manifest list sha256:a10ce7d8c58665ec2ed10f6cbdd9923b4cad998836b5d925c656beebf841d5e6 0.0s done
+#14 naming to docker.io/library/novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-pdf-converter:latest 0.0s done
+#14 unpacking to docker.io/library/novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-pdf-converter:latest
+#14 unpacking to docker.io/library/novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-pdf-converter:latest 0.2s done
+#14 DONE 0.8s
+
+#15 resolving provenance for metadata file
+#15 DONE 0.1s
+[+] up 2/2
+ ✔ Image novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-pdf-converter       Built                   6.5s
+ ✔ Container novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-pdf-converter-1 Started                 1.4s
+PostgreSQL is ready.
+Redis is ready.
+Ready: http://localhost:9000/minio/health/live
+Ready: http://localhost:8025
+Ready: http://localhost:4010/health
+test_editable_native_pdf (test_converter.ConverterTests.test_editable_native_pdf) ... ok
+test_mixed_orientation_sections (test_converter.ConverterTests.test_mixed_orientation_sections) ... ok
+test_preserve_layout_pdf (test_converter.ConverterTests.test_preserve_layout_pdf) ... ok
+test_scanned_pdf_bangla_ocr (test_converter.ConverterTests.test_scanned_pdf_bangla_ocr) ... ok
+test_scanned_pdf_ocr (test_converter.ConverterTests.test_scanned_pdf_ocr) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 6.719s
+
+OK
+[+]  1/1t 1/11
+ ✔ Container novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-minio-1 Running                         0.0s
+Container novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-minio-1 Waiting
+Container novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-minio-1 Healthy
+Container novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-minio-init-run-0561fc409925 Creating
+Container novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-minio-init-run-0561fc409925 Created
+mc: Configuration written to `/root/.mc/config.json`. Please update your access credentials.
+mc: Successfully created `/root/.mc/share`.
+mc: Initialized share uploads `/root/.mc/share/uploads.json` file.
+mc: Initialized share downloads `/root/.mc/share/downloads.json` file.
+Added `local` successfully.
+Bucket created successfully `local/novapdf-private`.
+Access permission for `local/novapdf-private` is set to `private`
+NAME                                                                             IMAGE                                                                          COMMAND                  SERVICE         CREATED          STATUS                    PORTS
+novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-mailpit-1         axllent/mailpit:v1.27                                                          "/mailpit"               mailpit         30 seconds ago   Up 28 seconds (healthy)   0.0.0.0:1025->1025/tcp, [::]:1025->1025/tcp, 0.0.0.0:8025->8025/tcp, [::]:8025->8025/tcp
+novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-minio-1           minio/minio:RELEASE.2025-04-22T22-12-26Z                                       "/usr/bin/docker-ent…"   minio           30 seconds ago   Up 28 seconds (healthy)   0.0.0.0:9000-9001->9000-9001/tcp, [::]:9000-9001->9000-9001/tcp
+novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-pdf-converter-1   novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-pdf-converter   "uvicorn app.main:ap…"   pdf-converter   20 seconds ago   Up 18 seconds (healthy)   0.0.0.0:4010->4010/tcp, [::]:4010->4010/tcp
+novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-postgres-1        postgres:16-alpine                                                             "docker-entrypoint.s…"   postgres        30 seconds ago   Up 28 seconds (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+novapdf_build_step_14_7_windows_node24_dev_launcher_corrective-redis-1           redis:7-alpine                                                                 "docker-entrypoint.s…"   redis           30 seconds ago   Up 28 seconds (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp
+
+============================================================
+Root public-registry clean install and validation
+============================================================
+Removing root node_modules only. Docker volumes are not touched.
+
+added 376 packages, and audited 377 packages in 1m
+
+11 high severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn allow-scripts 2 packages have install scripts not yet covered by allowScripts:
+npm warn allow-scripts   sharp@0.34.5 (install: node install/check.js || npm run build)
+npm warn allow-scripts   unrs-resolver@1.12.2 (postinstall: node postinstall.js)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+# npm audit report
+
+brace-expansion  <=5.0.7
+Severity: high
+brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash - https://github.com/advisories/GHSA-mh99-v99m-4gvg
+fix available via `npm audit fix --force`
+Will install eslint@10.8.0, which is a breaking change
+node_modules/@typescript-eslint/typescript-estree/node_modules/brace-expansion
+node_modules/brace-expansion
+  minimatch  2.0.0 - 10.0.2
+  Depends on vulnerable versions of brace-expansion
+  node_modules/minimatch
+    @eslint/config-array  <=0.22.0
+    Depends on vulnerable versions of minimatch
+    node_modules/@eslint/config-array
+      eslint  0.12.0 - 2.0.0-rc.1 || 4.1.0 - 10.0.0-rc.2
+      Depends on vulnerable versions of @eslint/config-array
+      Depends on vulnerable versions of @eslint/eslintrc
+      Depends on vulnerable versions of minimatch
+      node_modules/eslint
+    @eslint/eslintrc  0.0.1 || >=0.1.1
+    Depends on vulnerable versions of minimatch
+    node_modules/@eslint/eslintrc
+    eslint-plugin-import  >=1.15.0
+    Depends on vulnerable versions of minimatch
+    node_modules/eslint-plugin-import
+      eslint-config-next  >=10.2.1-canary.2
+      Depends on vulnerable versions of eslint-plugin-import
+      Depends on vulnerable versions of eslint-plugin-jsx-a11y
+      Depends on vulnerable versions of eslint-plugin-react
+      node_modules/eslint-config-next
+    eslint-plugin-jsx-a11y  >=6.5.0
+    Depends on vulnerable versions of minimatch
+    node_modules/eslint-plugin-jsx-a11y
+    eslint-plugin-react  >=7.23.0
+    Depends on vulnerable versions of minimatch
+    node_modules/eslint-plugin-react
+
+next  9.5.6-canary.0 - 10.0.7 || 14.3.0-canary.0 - 16.3.0-preview.7
+Severity: high
+Next.js: Middleware / Proxy bypass in App Router applications using Turbopack and single locale - https://github.com/advisories/GHSA-6gpp-xcg3-4w24
+Next.js: Denial of Service in App Router using Server Actions - https://github.com/advisories/GHSA-m99w-x7hq-7vfj
+Next.js: Server-Side Request Forgery in Server Actions on custom servers - https://github.com/advisories/GHSA-89xv-2m56-2m9x
+Next.js: Cache confusion of response bodies for requests with bodies - https://github.com/advisories/GHSA-68g3-v927-f742
+Next.js: Cache confusion of response bodies for requests with bodies containing invalid UTF-8 byte sequences - https://github.com/advisories/GHSA-4633-3j49-mh5q
+Next.js: Unbounded Server Action payload in Edge runtime - https://github.com/advisories/GHSA-4c39-4ccg-62r3
+Next.js: Server-Side Request Forgery in rewrites via attacker-controlled destination hostname - https://github.com/advisories/GHSA-p9j2-gv94-2wf4
+Next.js: Denial of Service in the Image Optimization API using SVGs - https://github.com/advisories/GHSA-q8wf-6r8g-63ch
+Next.js: Unauthenticated disclosure of internal Server Function endpoints - https://github.com/advisories/GHSA-955p-x3mx-jcvp
+Depends on vulnerable versions of sharp
+fix available via `npm audit fix --force`
+Will install next@16.2.12, which is outside the stated dependency range
+node_modules/next
+
+sharp  <0.35.0
+Severity: high
+sharp inherited vulnerabilities in libvips: CVE-2026-33327, CVE-2026-33328, CVE-2026-35590, CVE-2026-35591 - https://github.com/advisories/GHSA-f88m-g3jw-g9cj
+fix available via `npm audit fix --force`
+Will install next@16.2.12, which is outside the stated dependency range
+node_modules/sharp
+
+11 high severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+[WARNING] Root npm audit reported findings. The report was captured and no automatic fix was applied.
+
+> novapdf@0.14.7 lint
+> eslint
+
+
+> novapdf@0.14.7 test:contracts
+> node test-files/run-source-contracts.mjs
+
+
+== test-files/test-step-10-1-interaction-contract.mjs ==
+Step 10.1 interaction source contracts passed.
+
+== test-files/test-step-11-1-interaction-contract.mjs ==
+Step 11.1 recovery and keyboard interaction contracts passed.
+
+== test-files/test-step-11-3-watermark-scope-toolbar.mjs ==
+Step 11.3 watermark scope, Edit text, and shared history toolbar contracts passed.
+
+== test-files/test-step-12-sign-contract.mjs ==
+Sign PDF contract passed (9 checks).
+
+== test-files/test-step-12-1-self-signing-contract.mjs ==
+Complete self-signing contract passed (9 checks).
+
+== test-files/test-step-12-2-sign-ux-contract.mjs ==
+Sign PDF UX redesign contract passed (10 checks).
+
+== test-files/test-step-12-3-signature-styles.mjs ==
+Step 12.3 signature style, automatic initials, and duplicate-control removal contract passed.
+
+== test-files/test-step-12-4-remove-duplicate-sign-workflow.mjs ==
+Step 12.4 duplicate pre-upload workflow chooser removal contract passed.
+
+== test-files/test-step-12-5-signature-setup-cleanup.mjs ==
+Step 12.5 streamlined signature setup contract passed.
+
+== test-files/test-step-12-6-sign-editor-refinement.mjs ==
+Step 12.6 Sign PDF editor refinement contract passed.
+
+== test-files/test-step-12-7-sign-core-stabilization.mjs ==
+Step 12.7 Sign PDF core stabilization contract passed.
+
+== test-files/test-step-12-8-route-manifest.mjs ==
+Route manifest passed: 33 routes (32 tools plus homepage).
+/
+/merge-pdf
+/split-pdf
+/compress-pdf
+/pdf-to-word
+/pdf-to-powerpoint
+/pdf-to-excel
+/word-to-pdf
+/powerpoint-to-pdf
+/excel-to-pdf
+/edit-pdf
+/pdf-to-jpg
+/jpg-to-pdf
+/sign-pdf
+/watermark-pdf
+/rotate-pdf
+/html-to-pdf
+/unlock-pdf
+/protect-pdf
+/organize-pdf
+/pdf-to-pdfa
+/repair-pdf
+/page-numbers-pdf
+/scan-to-pdf
+/ocr-pdf
+/compare-pdf
+/redact-pdf
+/crop-pdf
+/pdf-forms
+/ai-summarizer
+/translate-pdf
+/pdf-to-markdown
+/create-workflow
+
+== test-files/test-step-12-8-request-signatures-backend.mjs ==
+Step 12.8 request-signatures backend contract passed (36 checks).
+
+== test-files/test-watermark-interaction-contract.mjs ==
+Watermark click-selection, SVG controls, and document-level keyboard interaction contract passed.
+
+== test-files/test-step-13-edit-pdf-contract.mjs ==
+Step 13 Edit PDF source contract passed (43 checks).
+
+== test-files/test-step-13-1-sign-pdf-corrections.mjs ==
+Step 13.1 Sign PDF corrections contract passed (22 checks).
+
+== test-files/test-step-13-2-one-click-runner.mjs ==
+Step 13.2 one-click Windows runner contract passed (32 checks).
+
+== test-files/test-step-13-3-shared-controls-checkbox-edit-alignment.mjs ==
+Step 13.3 shared controls, keyboard, checkbox, homepage, and Edit alignment contract passed (91 checks).
+
+== test-files/test-step-13-4-shared-guides-aspect-resize.mjs ==
+Step 13.4 shared guides, rulers, distances, and Shift-resize contract passed (57 checks).
+
+== test-files/test-step-13-5-windows-runner-eslint-corrective.mjs ==
+Step 13.5 Windows runner ESLint corrective contract passed (19 checks).
+
+== test-files/test-step-13-6-viewer-active-page-smooth-resize.mjs ==
+Step 13.6 unified viewer, active-page targeting, smooth resize, and Sign panel contract passed (32 checks).
+
+== test-files/test-step-13-7-viewer-visibility-portal-corrective.mjs ==
+Step 13.7 document-ready viewer visibility and duplicate portal corrective passed (16 checks).
+
+== test-files/test-step-14-1-pdf-to-word-working.mjs ==
+Step 14.1 PDF to Word working source contract passed (24 checks).
+
+== test-files/test-step-14-2-pdf-to-word-service-ocr.mjs ==
+Step 14.2 PDF to Word service/OCR source contract passed (22 checks).
+
+== test-files/test-step-14-3-pdf-to-word-converter-startup-proxy.mjs ==
+Step 14.3 PDF to Word converter startup/proxy contract passed (15 checks).
+
+== test-files/test-step-14-4-pdf-to-word-eslint-windows-gate.mjs ==
+Step 14.4 Windows ESLint corrective contract passed (11 checks).
+
+== test-files/test-step-14-5-pdfjs-document-cleanup-typescript.mjs ==
+Step 14.5 TypeScript corrective contract passed (8 checks).
+
+== test-files/test-step-14-6-migration-apply-verify-sequence.mjs ==
+Step 14.6 migration apply/verify sequence contract passed (12 checks).
+
+== test-files/test-step-14-7-windows-node24-dev-launcher.mjs ==
+Step 14.7 Windows Node 24 development launcher contract passed (15 checks).
+
+All 29 dependency-free source contracts passed.
+
+> novapdf@0.14.7 test:pdf-engines
+> node test-files/run-pdf-engine-tests.mjs
+
+
+== test-files/test-crop-engine.mjs ==
+(node:6052) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/CNovaPDF-v145/NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective/src/lib/crop-pdf.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\CNovaPDF-v145\NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Crop PDF engine tests passed.
+
+== test-files/test-page-numbers-engine.mjs ==
+(node:3308) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/CNovaPDF-v145/NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective/src/lib/.page-numbers-pdf.engine-test-3308.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\CNovaPDF-v145\NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Page-number engine parity tests passed for all six positions. Outputs: C:\Users\HP\AppData\Local\Temp\novapdf-page-number-test-Dc5fiU
+
+== test-files/test-rotate-engine.mjs ==
+(node:7652) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/CNovaPDF-v145/NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective/src/lib/rotate-pdf.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\CNovaPDF-v145\NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Rotate PDF engine tests passed.
+
+== test-files/test-rotate-targeting.mjs ==
+Rotate target-mode selection tests passed.
+
+== test-files/test-sign-engine.mjs ==
+Sign PDF engine tests passed. Output: test-files/sample-sign-output.pdf
+
+== test-files/test-step-11-2-crop-refinement.mjs ==
+(node:10116) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/CNovaPDF-v145/NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective/src/lib/crop-pdf.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\CNovaPDF-v145\NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Step 11.2 Crop PDF refinement tests passed.
+
+== test-files/test-step-11-4-crop-watermark-corrections.mjs ==
+(node:6660) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/CNovaPDF-v145/NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective/src/lib/watermark-pdf.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\CNovaPDF-v145\NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Warning: UnknownErrorException: Ensure that the `standardFontDataUrl` API parameter is provided.
+Warning: UnknownErrorException: Ensure that the `standardFontDataUrl` API parameter is provided.
+Warning: UnknownErrorException: Ensure that the `standardFontDataUrl` API parameter is provided.
+Step 11.4 Crop defaults/ticks and page-specific Watermark text tests passed.
+
+== test-files/test-step-11-5-crop-watermark-scope.mjs ==
+(node:13716) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/CNovaPDF-v145/NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective/src/lib/watermark-pdf.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\CNovaPDF-v145\NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Warning: UnknownErrorException: Ensure that the `standardFontDataUrl` API parameter is provided.
+Warning: UnknownErrorException: Ensure that the `standardFontDataUrl` API parameter is provided.
+Warning: UnknownErrorException: Ensure that the `standardFontDataUrl` API parameter is provided.
+Warning: UnknownErrorException: Ensure that the `standardFontDataUrl` API parameter is provided.
+Step 11.5 zero Crop margins and scope-aware Watermark style tests passed.
+
+== test-files/test-step-12-1-self-signing.mjs ==
+Complete self-signing engine test passed. Output: test-files/sample-self-sign-output.pdf
+
+== test-files/test-watermark-engine.mjs ==
+(node:5180) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/CNovaPDF-v145/NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective/src/lib/watermark-pdf.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\CNovaPDF-v145\NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Text, image, custom-position, multi-instance, page-specific, and rotated-page watermark engine tests passed.
+
+== test-files/test-edit-pdf-engine.mjs ==
+Edit PDF engine tests passed. Output: test-files/sample-edit-pdf-output.pdf
+
+== test-files/test-pdf-to-word-engine.mjs ==
+PDF to Word engine tests passed. Editable and preserve-layout DOCX fixtures created.
+
+All 12 dependency-backed PDF-engine tests passed.
+
+> novapdf@0.14.7 build
+> next build --webpack
+
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+▲ Next.js 16.2.10 (webpack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 27.7s
+✓ Finished TypeScript in 17.8s
+✓ Collecting page data using 3 workers in 1606ms
+✓ Generating static pages using 3 workers (36/36) in 3.8s
+✓ Collecting build traces in 11.7s
+✓ Finalizing page optimization in 11.7s
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ● /[tool]
+│ ├ /merge-pdf
+│ ├ /split-pdf
+│ ├ /compress-pdf
+│ └ [+29 more paths]
+├ ƒ /api/pdf-to-word/analyze
+├ ƒ /api/pdf-to-word/convert
+├ ƒ /api/pdf-to-word/health
+└ ○ /icon.svg
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+============================================================
+Backend fresh lock, clean install, validation, and migration
+============================================================
+
+up to date, audited 402 packages in 1m
+
+7 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn allow-scripts 2 packages have install scripts not yet covered by allowScripts:
+npm warn allow-scripts   msgpackr-extract@3.0.4 (install: node-gyp-build-optional-packages)
+npm warn allow-scripts   @scarf/scarf@1.4.0 (postinstall: node ./report.js)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 401 packages, and audited 402 packages in 39s
+
+7 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn allow-scripts 2 packages have install scripts not yet covered by allowScripts:
+npm warn allow-scripts   @scarf/scarf@1.4.0 (postinstall: node ./report.js)
+npm warn allow-scripts   msgpackr-extract@3.0.4 (install: node-gyp-build-optional-packages)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+# npm audit report
+
+brace-expansion  <=5.0.7
+Severity: high
+brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash - https://github.com/advisories/GHSA-mh99-v99m-4gvg
+fix available via `npm audit fix --force`
+Will install eslint@10.8.0, which is a breaking change
+node_modules/brace-expansion
+node_modules/glob/node_modules/brace-expansion
+  minimatch  2.0.0 - 10.0.2
+  Depends on vulnerable versions of brace-expansion
+  node_modules/glob/node_modules/minimatch
+  node_modules/minimatch
+    @eslint/config-array  <=0.22.0
+    Depends on vulnerable versions of minimatch
+    node_modules/@eslint/config-array
+      eslint  0.12.0 - 2.0.0-rc.1 || 4.1.0 - 10.0.0-rc.2
+      Depends on vulnerable versions of @eslint/config-array
+      Depends on vulnerable versions of @eslint/eslintrc
+      Depends on vulnerable versions of minimatch
+      node_modules/eslint
+    @eslint/eslintrc  0.0.1 || >=0.1.1
+    Depends on vulnerable versions of minimatch
+    node_modules/@eslint/eslintrc
+    glob  4.3.0 - 10.5.0
+    Depends on vulnerable versions of minimatch
+    node_modules/glob
+      typeorm  0.0.2-alpha - 0.4.0-alpha.1
+      Depends on vulnerable versions of glob
+      node_modules/typeorm
+
+7 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+[WARNING] Backend npm audit reported findings. The report was captured and no automatic fix was applied.
+
+> novapdf-request-signatures-backend@0.12.8 lint
+> eslint "src/**/*.ts" "test/**/*.ts"
+
+
+> novapdf-request-signatures-backend@0.12.8 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> novapdf-request-signatures-backend@0.12.8 build
+> tsc -p tsconfig.build.json
+
+
+> novapdf-request-signatures-backend@0.12.8 test
+> node -r ts-node/register --test test/request-input.test.ts test/status-policy.test.ts test/pdf-renderer.test.ts test/runtime-metadata.test.ts
+
+✔ renders text, input, checkbox, and image fields on a rotated PDF (149.5105ms)
+✔ normalizes recipients and preserves recipient-specific fields (10.6783ms)
+✔ rejects a recipient without assigned fields (3.4727ms)
+✔ rejects duplicate recipient emails (0.7688ms)
+✔ ts-node runtime emits Nest constructor metadata and loads every TypeORM entity (1.4972ms)
+✔ parallel mode activates every incomplete recipient (3.5156ms)
+✔ sequential mode activates only the first incomplete recipient (0.5961ms)
+✔ status aggregation tracks delivery, view, and partial completion (1.037ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21332.5848
+
+> novapdf-request-signatures-backend@0.12.8 test:metadata
+> node -r ts-node/register --test test/runtime-metadata.test.ts
+
+✔ ts-node runtime emits Nest constructor metadata and loads every TypeORM entity (1.4776ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13754.8785
+
+> novapdf-request-signatures-backend@0.12.8 migration:run
+> typeorm-ts-node-commonjs -d src/database/data-source.ts migration:run
+
+query: SELECT version()
+query: SELECT * FROM current_schema()
+query: CREATE EXTENSION IF NOT EXISTS "uuid-ossp"
+query: CREATE EXTENSION IF NOT EXISTS "citext"
+query: SELECT * FROM "information_schema"."tables" WHERE "table_schema" = 'public' AND "table_name" = 'migrations'
+query: CREATE TABLE "migrations" ("id" SERIAL NOT NULL, "timestamp" bigint NOT NULL, "name" character varying NOT NULL, CONSTRAINT "PK_8c82d7f526340ab734260ea46be" PRIMARY KEY ("id"))
+query: SELECT * FROM "migrations" "migrations" ORDER BY "id" DESC
+0 migrations are already loaded in the database.
+1 migrations were found in the source code.
+1 migrations are new migrations must be executed.
+query: START TRANSACTION
+query: CREATE EXTENSION IF NOT EXISTS "citext"
+query: CREATE EXTENSION IF NOT EXISTS "pgcrypto"
+query: CREATE TYPE signing_mode_enum AS ENUM ('PARALLEL','SEQUENTIAL')
+query: CREATE TYPE signature_request_status_enum AS ENUM ('DRAFT','SENT','DELIVERED','VIEWED','PARTIALLY_SIGNED','COMPLETED','DECLINED','EXPIRED','CANCELLED')
+query: CREATE TYPE recipient_status_enum AS ENUM ('WAITING','READY','SENT','DELIVERED','VIEWED','COMPLETED','DECLINED','EXPIRED','CANCELLED')
+query: CREATE TYPE signature_field_type_enum AS ENUM ('SIGNATURE','INITIALS','NAME','DATE','TEXT','INPUT','CHECKBOX','STAMP')
+query: CREATE TYPE audit_actor_type_enum AS ENUM ('SENDER','RECIPIENT','SYSTEM','EMAIL_PROVIDER')
+query: CREATE TYPE email_kind_enum AS ENUM ('INVITATION','REMINDER','COMPLETED','DECLINED','CANCELLED')
+query: CREATE TYPE email_delivery_status_enum AS ENUM ('QUEUED','SENT','DELIVERED','BOUNCED','FAILED')
+query: CREATE TABLE users (
+      id uuid PRIMARY KEY DEFAULT gen_random_uuid(), email citext NOT NULL UNIQUE, display_name varchar(120) NOT NULL,
+      password_hash varchar(100) NOT NULL, created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now()
+    )
+query: CREATE TABLE auth_sessions (
+      id uuid PRIMARY KEY DEFAULT gen_random_uuid(), token_hash varchar(64) NOT NULL UNIQUE, user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      expires_at timestamptz NOT NULL, revoked_at timestamptz, last_seen_at timestamptz NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
+    )
+query: CREATE TABLE documents (
+      id uuid PRIMARY KEY DEFAULT gen_random_uuid(), owner_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      original_name varchar(255) NOT NULL, mime_type varchar(100) NOT NULL, size bigint NOT NULL, sha256 varchar(64) NOT NULL,
+      storage_key varchar(500) NOT NULL UNIQUE, completed_storage_key varchar(500), completed_sha256 varchar(64), completed_size bigint,
+      created_at timestamptz NOT NULL DEFAULT now()
+    )
+query: CREATE TABLE signature_requests (
+      id uuid PRIMARY KEY DEFAULT gen_random_uuid(), sender_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      document_id uuid NOT NULL UNIQUE REFERENCES documents(id) ON DELETE CASCADE, title varchar(180) NOT NULL, message text,
+      signing_mode signing_mode_enum NOT NULL, status signature_request_status_enum NOT NULL DEFAULT 'DRAFT', expires_at timestamptz NOT NULL,
+      sent_at timestamptz, completed_at timestamptz, declined_at timestamptz, cancelled_at timestamptz,
+      version integer NOT NULL DEFAULT 1, created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now()
+    )
+query: CREATE INDEX idx_signature_requests_sender ON signature_requests(sender_id)
+query: CREATE INDEX idx_signature_requests_status ON signature_requests(status)
+query: CREATE TABLE signature_request_recipients (
+      id uuid PRIMARY KEY DEFAULT gen_random_uuid(), request_id uuid NOT NULL REFERENCES signature_requests(id) ON DELETE CASCADE,
+      name varchar(120) NOT NULL, email citext NOT NULL, order_index integer NOT NULL, status recipient_status_enum NOT NULL DEFAULT 'WAITING',
+      token_hash varchar(64), token_expires_at timestamptz, sent_at timestamptz, delivered_at timestamptz, viewed_at timestamptz,
+      completed_at timestamptz, declined_at timestamptz, decline_reason text, reminder_count integer NOT NULL DEFAULT 0,
+      last_reminder_at timestamptz, completion_data jsonb, created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now(),
+      CONSTRAINT uq_recipient_email UNIQUE(request_id,email), CONSTRAINT uq_recipient_order UNIQUE(request_id,order_index)
+    )
+query: CREATE UNIQUE INDEX uq_recipient_token_hash ON signature_request_recipients(token_hash) WHERE token_hash IS NOT NULL
+query: CREATE INDEX idx_recipient_status ON signature_request_recipients(status)
+query: CREATE TABLE signature_request_fields (
+      id uuid PRIMARY KEY DEFAULT gen_random_uuid(), request_id uuid NOT NULL REFERENCES signature_requests(id) ON DELETE CASCADE,
+      recipient_id uuid NOT NULL REFERENCES signature_request_recipients(id) ON DELETE CASCADE, page_number integer NOT NULL,
+      type signature_field_type_enum NOT NULL, x double precision NOT NULL, y double precision NOT NULL,
+      width double precision NOT NULL, height double precision NOT NULL, rotation double precision NOT NULL DEFAULT 0,
+      required boolean NOT NULL DEFAULT false, label varchar(120), default_value text, style jsonb NOT NULL DEFAULT '{}'::jsonb,
+      CONSTRAINT ck_field_page CHECK (page_number > 0), CONSTRAINT ck_field_x CHECK (x >= 0 AND x <= 1),
+      CONSTRAINT ck_field_y CHECK (y >= 0 AND y <= 1), CONSTRAINT ck_field_width CHECK (width > 0 AND width <= 1),
+      CONSTRAINT ck_field_height CHECK (height > 0 AND height <= 1)
+    )
+query: CREATE INDEX idx_signature_fields_request_page ON signature_request_fields(request_id,page_number)
+query: CREATE TABLE signature_request_audit_events (
+      id uuid PRIMARY KEY DEFAULT gen_random_uuid(), request_id uuid NOT NULL REFERENCES signature_requests(id) ON DELETE CASCADE,
+      recipient_id uuid REFERENCES signature_request_recipients(id) ON DELETE SET NULL, actor_type audit_actor_type_enum NOT NULL,
+      actor_id varchar(120), event_type varchar(100) NOT NULL, ip_hash varchar(64), user_agent varchar(500),
+      metadata jsonb NOT NULL DEFAULT '{}'::jsonb, created_at timestamptz NOT NULL DEFAULT now()
+    )
+query: CREATE INDEX idx_audit_request_created ON signature_request_audit_events(request_id,created_at)
+query: CREATE TABLE signature_request_email_deliveries (
+      id uuid PRIMARY KEY DEFAULT gen_random_uuid(), request_id uuid NOT NULL REFERENCES signature_requests(id) ON DELETE CASCADE,
+      recipient_id uuid REFERENCES signature_request_recipients(id) ON DELETE CASCADE, kind email_kind_enum NOT NULL,
+      status email_delivery_status_enum NOT NULL DEFAULT 'QUEUED', provider_message_id varchar(255), last_error text,
+      sent_at timestamptz, delivered_at timestamptz, created_at timestamptz NOT NULL DEFAULT now()
+    )
+query: CREATE INDEX idx_email_delivery_status ON signature_request_email_deliveries(status)
+query: CREATE INDEX idx_email_provider_message ON signature_request_email_deliveries(provider_message_id)
+query: CREATE UNIQUE INDEX uq_completed_email_per_request ON signature_request_email_deliveries(request_id,kind) WHERE recipient_id IS NULL AND kind = 'COMPLETED'
+query: CREATE OR REPLACE FUNCTION reject_audit_event_mutation() RETURNS trigger AS $$
+      BEGIN RAISE EXCEPTION 'signature request audit events are append-only'; END; $$ LANGUAGE plpgsql
+query: CREATE TRIGGER audit_events_no_update BEFORE UPDATE ON signature_request_audit_events FOR EACH ROW EXECUTE FUNCTION reject_audit_event_mutation()
+query: CREATE TRIGGER audit_events_no_delete BEFORE DELETE ON signature_request_audit_events FOR EACH ROW EXECUTE FUNCTION reject_audit_event_mutation()
+query: INSERT INTO "migrations"("timestamp", "name") VALUES ($1, $2) -- PARAMETERS: [1721800000000,"CreateSignatureRequestBackend1721800000000"]
+Migration CreateSignatureRequestBackend1721800000000 has been executed successfully.
+query: COMMIT
+[X] 1 CreateSignatureRequestBackend1721800000000
+[ERROR] The committed Step 12.8 migration was not shown as applied after migration:run.
+
+============================================================
+[FAILED] Verifying the committed PostgreSQL migration is applied
+============================================================
+Review the error above and the files in:
+C:\CNovaPDF-v145\NovaPDF_Build_Step_14_7_Windows_Node24_Dev_Launcher_Corrective\validation-logs
+
+Docker volumes were not deleted.
+No forced npm audit fix was run.
+
+Press any key to continue . . .

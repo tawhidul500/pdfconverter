@@ -1,0 +1,24 @@
+Continue NovaPDF from `NovaPDF_Project_Handoff_v131_Sign_PDF_Corrections_Full.zip` and `NovaPDF_Build_Step_13_1_Sign_PDF_Corrections.zip`.
+
+Before coding, read the complete `NovaPDF_Master_Project_Handoff_v131.md`, `NovaPDF_All_Tools_Options.md`, `RELEASE_NOTES_0.13.1.md`, and `WINDOWS_VALIDATION_STEP_13_1.md`, then inspect the actual source. Do not rebuild from assumptions.
+
+Current truthful state:
+- v0.13.1 implements the requested Sign PDF corrections: practical unrestricted resizing, Edit on every field, color on every field except Company stamp, right-panel Edit controls, inline Done, clearer filename UI, removal of the old Text or input value control, removal of red required stars, measured/padded typed signatures, browser-restored signer name/initials, and bottom Page X of Y navigation in Sign PDF and Edit PDF;
+- all 16 dependency-free source contracts passed, including the 22-check Step 13.1 corrective contract, preserved 43-check Edit PDF contract, and preserved 36-check Step 12.8 backend contract;
+- all 90 TypeScript/TSX files passed syntax parsing and the stylesheet passed delimiter validation;
+- the backend remains unchanged;
+- full dependency-backed Windows/browser acceptance remains pending because the recovery sandbox npm proxy returned a missing-tarball 404;
+- Edit PDF remains an implementation candidate;
+- Request signatures remains disabled and is not Working.
+
+Next actions:
+1. Extract Step 13.1 without deleting Docker volumes.
+2. Follow `WINDOWS_VALIDATION_STEP_13_1.md` exactly.
+3. Run root public-registry clean install, audit capture, lint, semantic TypeScript, 16 contracts, 11 engine tests, production build, and all 33 live routes.
+4. Complete the 15-item Sign PDF corrective Chrome checklist and the existing ten-item Edit PDF checklist.
+5. Continue the preserved Corrective Package 5 backend clean-install, metadata, migration, API/worker, real sequential two-recipient E2E, Sign PDF baseline, controlled root security regression, and production-provider delivery/webhook gates.
+6. Do not begin Request Signatures UI integration or mark Request signatures Working before every required gate passes.
+
+Preserve all 32 tools, eleven previously proven engines, the Edit PDF source, current NovaPDF design, right-side panels, preview behavior, one-way active-page controllers, lazy active-neighborhood previews, 50-200% zoom, file transfer, Start over, home reset, `allowedDevOrigins: ["172.24.48.1", "172.21.32.1"]`, public npm registry URLs only, existing Docker volumes, and no `npm audit fix --force`.
+
+Conversation with the user should be in Bangla. All website UI copy must remain US English for a USA-targeted audience.

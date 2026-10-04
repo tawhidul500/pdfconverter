@@ -1,0 +1,13 @@
+Continue NovaPDF from the Build Step 14.1 PDF to Word working implementation-candidate package.
+
+Before coding, read the complete NovaPDF_Master_Project_Handoff_v141.md, NovaPDF_All_Tools_Options.md, RELEASE_NOTES_0.14.1.md, VALIDATION_REPORT_STEP_14_1.md, and WINDOWS_VALIDATION_STEP_14_1.md, then inspect the actual source.
+
+Current state:
+- PDF to Word has a real browser-local DOCX engine.
+- Preserve layout embeds rendered PDF pages in matching Word sections.
+- Editable text extracts and reconstructs editable Word paragraphs.
+- All/custom pages, separate/combined outputs, downloads, progress, errors, file transfer, Start over, home reset, and shared view modes are connected.
+- OCR remains unavailable; scanned documents work through Preserve layout.
+- Request Signatures remains disabled and is deferred until the final major feature.
+
+First run the complete Windows automated and manual validation. Correct only grounded defects. After PDF to Word is accepted, continue the next fully functional tool in the frontend-first sequence; do not build a frontend-only placeholder. Preserve all 32 tools, 33 routes, existing engines, NovaPDF design, right-side panels, preview behavior, viewer modes, exact allowedDevOrigins, public npm registry URLs, Docker volumes, and runner safety. Do not use npm audit fix --force.

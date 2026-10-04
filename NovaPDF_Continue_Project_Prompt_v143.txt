@@ -1,0 +1,15 @@
+Continue NovaPDF from the Build Step 14.3 PDF to Word Converter Startup/Proxy Corrective package.
+
+Before coding, read NovaPDF_Master_Project_Handoff_v143.md, NovaPDF_All_Tools_Options.md, RELEASE_NOTES_0.14.3.md, VALIDATION_REPORT_STEP_14_3.md, and WINDOWS_VALIDATION_STEP_14_3.md, then inspect the actual source. Do not rebuild from assumptions.
+
+Current v0.14.3 candidate state:
+- PDF to Word uses same-origin Next.js proxy routes; the browser does not call port 4010 directly.
+- converter-offline failures return controlled 503 JSON and do not create repeated Next.js runtime overlays;
+- health cleanup no longer aborts a request;
+- upload analysis waits for converter online and is deduplicated;
+- START_PDF_CONVERTER.cmd repairs only the converter without deleting volumes;
+- npm run dev attempts converter startup, and the full runner builds and logs the converter explicitly;
+- the PDFium/python-docx/Tesseract conversion engine and English/Bangla OCR remain connected;
+- Request Signatures remains disabled and deferred until the final major feature.
+
+Run the complete Windows validation before promotion. Preserve all locked project boundaries.

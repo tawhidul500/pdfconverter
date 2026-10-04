@@ -1,0 +1,29 @@
+NovaPDF Build Step 13.3 package manifest
+
+Primary source:
+- src/
+- public/
+- backend/ (preserved unchanged)
+- test-files/
+- package.json
+- package-lock.json
+- docker-compose.yml
+- next.config.ts
+- tsconfig.json
+- eslint.config.mjs
+
+Execution:
+- RUN_NOVAPDF_ALL.cmd
+- RUNNING_NOVAPDF_0.13.3.md
+- WINDOWS_VALIDATION_STEP_13_3.md
+
+Handoff and evidence:
+- NovaPDF_Master_Project_Handoff_v133.md
+- NovaPDF_Continue_Project_Prompt_v133.txt
+- NovaPDF_All_Tools_Options.md
+- RELEASE_NOTES_0.13.3.md
+- VALIDATION_REPORT_STEP_13_3.md
+- SOURCE_CHANGE_SUMMARY_v133.txt
+- PROJECT_STATUS.md
+- README.md
+- CHANGELOG.md

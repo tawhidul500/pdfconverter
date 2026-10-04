@@ -1,0 +1,25 @@
+NovaPDF v0.14.3 source change summary
+
+Corrected:
+- direct browser calls to localhost:4010;
+- repeated converter-offline health/analyze network errors;
+- React Strict Mode cleanup AbortError;
+- duplicate analysis requests;
+- disabled offline recovery action;
+- converter startup/repair diagnostics.
+
+Added:
+- same-origin health/analyze/convert route handlers;
+- server-side converter proxy helper;
+- converter-aware npm development launcher;
+- START_PDF_CONVERTER.cmd;
+- Step 14.3 source contract and handoff/validation documents.
+
+Preserved:
+- PDFium/python-docx/Tesseract conversion engine;
+- English/Bangla OCR;
+- 32 tools and 33 public routes;
+- exact allowed development origins;
+- all 68 backend files byte-for-byte;
+- Docker volumes and no-force-audit policy;
+- Request Signatures disabled/final-feature boundary.

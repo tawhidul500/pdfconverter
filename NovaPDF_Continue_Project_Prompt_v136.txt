@@ -1,0 +1,26 @@
+Continue NovaPDF from `NovaPDF_Project_Handoff_v136_Unified_Viewer_Active_Page_Smooth_Resize_Full.zip` and `NovaPDF_Build_Step_13_6_Unified_Viewer_Active_Page_Smooth_Resize.zip`.
+
+Before coding, read the complete `NovaPDF_Master_Project_Handoff_v136.md`, `NovaPDF_All_Tools_Options.md`, `RELEASE_NOTES_0.13.6.md`, `VALIDATION_REPORT_STEP_13_6.md`, and `WINDOWS_VALIDATION_STEP_13_6.md`, then inspect the actual source. Do not rebuild from assumptions.
+
+Current v0.13.6 candidate state:
+- shared PDF controls render through a document-body portal and use the same unclipped bottom toolbar across implemented tools;
+- Continuous, Single-page, Two-page, and Three-page views exist;
+- resize guides are visual-only and no longer force Edit PDF, Sign PDF, or Crop PDF dimensions to snap;
+- Shift-drag uses smooth continuous aspect-ratio scaling;
+- Edit PDF uses an explicit active page for new objects, including images opened through the file picker;
+- Edit PDF selected-object pointer listeners remain stable and small highlights have a larger resize hit target;
+- Sign PDF output naming/action/result flow scrolls naturally in the right panel;
+- all 21 dependency-free source contracts and TypeScript/TSX syntax validation passed in packaging;
+- dependency-backed Windows gates and the manual Chrome checklist remain required;
+- Request Signatures remains disabled and is not Working.
+
+Next actions:
+1. Extract the Step 13.6 package without deleting Docker volumes.
+2. Double-click `RUN_NOVAPDF_ALL.cmd`.
+3. Confirm root clean install, audit capture, lint, TypeScript, 21 contracts, 11 PDF-engine tests, production build, backend gates, migration, health, 33 routes, and local E2E.
+4. Complete every item in `WINDOWS_VALIDATION_STEP_13_6.md`, especially toolbar clipping, two/three-page views, smooth resize, active-page insertion, highlight interaction, and Sign PDF panel scrolling.
+5. Preserve all 32 tools, existing engines, homepage routing, right-side panels, previews, zoom, file transfer, Start over, home reset, exact `allowedDevOrigins`, public npm registry URLs, and the updated one-click runner.
+6. Do not use `npm audit fix --force`.
+7. Do not begin Step 12.9 or mark Request Signatures Working until the complete automated, manual, controlled-security, and production-provider gates pass.
+
+Continue conversation replies in Bangla. Keep all website/UI content targeted to a US English audience. Every handoff must include an updated one-click Windows runner and step-by-step running instructions.

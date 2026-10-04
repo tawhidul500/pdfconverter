@@ -1,0 +1,48 @@
+NovaPDF v0.13.1 Step 13.1 Sign PDF corrective source package
+Date: 30 July 2026
+
+Authoritative current files:
+- NovaPDF_Master_Project_Handoff_v131.md
+- NovaPDF_All_Tools_Options.md
+- NovaPDF_Continue_Project_Prompt_v131.txt
+- WINDOWS_VALIDATION_STEP_13_1.md
+- VALIDATION_REPORT_STEP_13_1.md
+- RELEASE_NOTES_0.13.1.md
+- PROJECT_STATUS.md
+- README.md
+- CHANGELOG.md
+
+Corrective implementation files:
+- src/components/sign-pdf-workspace.tsx
+- src/components/edit-pdf-workspace.tsx
+- src/lib/sign-pdf.ts
+- src/app/globals.css
+- test-files/test-step-13-1-sign-pdf-corrections.mjs
+- updated Sign PDF source contracts and source-contract runner
+- package.json and package-lock.json version 0.13.1
+
+Validation completed in recovery sandbox:
+- 16 dependency-free source contracts passed
+- Step 13.1 corrective contract: 22 checks passed
+- Step 13 Edit PDF contract: 43 checks passed
+- Step 12.8 backend/corrective contract: 36 checks passed
+- 90 TypeScript/TSX files parsed with zero syntax diagnostics
+- CSS delimiter validation passed
+- backend unchanged
+- no Docker command run
+- public registry URLs preserved
+
+Pending on Windows:
+- npm clean install and audit capture
+- ESLint and semantic TypeScript
+- 11 dependency-backed PDF-engine tests
+- production build and 33 live routes
+- Sign PDF corrective and Edit PDF Chrome checklists
+- preserved backend runtime/E2E/security/provider gates
+
+Release boundary:
+- Sign PDF v0.13.1 corrections require Windows/Chrome acceptance
+- Edit PDF remains an implementation candidate
+- Request signatures remains disabled and not Working
+- do not delete Docker volumes
+- do not run npm audit fix --force

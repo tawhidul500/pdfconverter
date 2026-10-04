@@ -1,0 +1,42 @@
+NovaPDF Build Step 14.1 — Source Change Summary
+
+Purpose:
+Correct Step 14.0 from a frontend-only PDF to Word candidate into a real browser-local, downloadable DOCX implementation candidate. Request Signatures remains deferred and the Step 12.8 backend remains unchanged.
+
+Primary implementation:
+- Added src/lib/pdf-to-word.ts
+- Connected real conversion in src/components/pdf-to-word-workspace.tsx
+- Added preserve-layout and editable-text modes
+- Added separate/combined real DOCX downloads
+- Added progress, result metadata, errors, scanned-PDF guidance, and object-URL cleanup
+
+Tests and runner:
+- Added test-files/test-pdf-to-word-engine.mjs
+- Added test-files/test-step-14-1-pdf-to-word-working.mjs
+- Updated test-files/run-pdf-engine-tests.mjs to 12 tests
+- Updated test-files/run-source-contracts.mjs to the Step 14.1 contract
+- Updated successor-version assertions in preserved source contracts
+- Updated RUN_NOVAPDF_ALL.cmd and current Windows checklist
+
+Current documentation:
+- NovaPDF_Master_Project_Handoff_v141.md
+- NovaPDF_Continue_Project_Prompt_v141.txt
+- RELEASE_NOTES_0.14.1.md
+- VALIDATION_REPORT_STEP_14_1.md
+- WINDOWS_VALIDATION_STEP_14_1.md
+- RUNNING_NOVAPDF_0.14.1.md
+- README.md
+- README_HANDOFF.md
+- PROJECT_STATUS.md
+- CHANGELOG.md
+- NovaPDF_All_Tools_Options.md
+
+Preserved:
+- 32 tools / 33 routes
+- Existing engines and tool behavior
+- Viewer modes and Step 13.7 portal lifecycle
+- Exact allowedDevOrigins
+- Public npm registry policy
+- Docker volumes and safe runner behavior
+- Step 12.8 backend: 68/68 files byte-for-byte identical
+- Request Signatures disabled and not Working

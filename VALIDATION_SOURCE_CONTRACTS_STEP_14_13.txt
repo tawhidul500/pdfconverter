@@ -1,0 +1,140 @@
+
+== test-files/test-step-10-1-interaction-contract.mjs ==
+Step 10.1 interaction source contracts passed.
+
+== test-files/test-step-11-1-interaction-contract.mjs ==
+Step 11.1 recovery and keyboard interaction contracts passed.
+
+== test-files/test-step-11-3-watermark-scope-toolbar.mjs ==
+Step 11.3 watermark scope, Edit text, and shared history toolbar contracts passed.
+
+== test-files/test-step-12-sign-contract.mjs ==
+Sign PDF contract passed (9 checks).
+
+== test-files/test-step-12-1-self-signing-contract.mjs ==
+Complete self-signing contract passed (9 checks).
+
+== test-files/test-step-12-2-sign-ux-contract.mjs ==
+Sign PDF UX redesign contract passed (10 checks).
+
+== test-files/test-step-12-3-signature-styles.mjs ==
+Step 12.3 signature style, automatic initials, and duplicate-control removal contract passed.
+
+== test-files/test-step-12-4-remove-duplicate-sign-workflow.mjs ==
+Step 12.4 duplicate pre-upload workflow chooser removal contract passed.
+
+== test-files/test-step-12-5-signature-setup-cleanup.mjs ==
+Step 12.5 streamlined signature setup contract passed.
+
+== test-files/test-step-12-6-sign-editor-refinement.mjs ==
+Step 12.6 Sign PDF editor refinement contract passed.
+
+== test-files/test-step-12-7-sign-core-stabilization.mjs ==
+Step 12.7 Sign PDF core stabilization contract passed.
+
+== test-files/test-step-12-8-route-manifest.mjs ==
+Route manifest passed: 33 routes (32 tools plus homepage).
+/
+/merge-pdf
+/split-pdf
+/compress-pdf
+/pdf-to-word
+/pdf-to-powerpoint
+/pdf-to-excel
+/word-to-pdf
+/powerpoint-to-pdf
+/excel-to-pdf
+/edit-pdf
+/pdf-to-jpg
+/jpg-to-pdf
+/sign-pdf
+/watermark-pdf
+/rotate-pdf
+/html-to-pdf
+/unlock-pdf
+/protect-pdf
+/organize-pdf
+/pdf-to-pdfa
+/repair-pdf
+/page-numbers-pdf
+/scan-to-pdf
+/ocr-pdf
+/compare-pdf
+/redact-pdf
+/crop-pdf
+/pdf-forms
+/ai-summarizer
+/translate-pdf
+/pdf-to-markdown
+/create-workflow
+
+== test-files/test-step-12-8-request-signatures-backend.mjs ==
+Step 12.8 request-signatures backend contract passed (36 checks).
+
+== test-files/test-watermark-interaction-contract.mjs ==
+Watermark click-selection, SVG controls, and document-level keyboard interaction contract passed.
+
+== test-files/test-step-13-edit-pdf-contract.mjs ==
+Step 13 Edit PDF source contract passed (43 checks).
+
+== test-files/test-step-13-1-sign-pdf-corrections.mjs ==
+Step 13.1 Sign PDF corrections contract passed (22 checks).
+
+== test-files/test-step-13-2-one-click-runner.mjs ==
+Step 13.2 one-click Windows runner contract passed (32 checks).
+
+== test-files/test-step-13-3-shared-controls-checkbox-edit-alignment.mjs ==
+Step 13.3 shared controls, keyboard, checkbox, homepage, and Edit alignment contract passed (91 checks).
+
+== test-files/test-step-13-4-shared-guides-aspect-resize.mjs ==
+Step 13.4 shared guides, rulers, distances, and Shift-resize contract passed (57 checks).
+
+== test-files/test-step-13-5-windows-runner-eslint-corrective.mjs ==
+Step 13.5 Windows runner ESLint corrective contract passed (19 checks).
+
+== test-files/test-step-13-6-viewer-active-page-smooth-resize.mjs ==
+Step 13.6 unified viewer, active-page targeting, smooth resize, and Sign panel contract passed (32 checks).
+
+== test-files/test-step-13-7-viewer-visibility-portal-corrective.mjs ==
+Step 13.7 document-ready viewer visibility and duplicate portal corrective passed (16 checks).
+
+== test-files/test-step-14-1-pdf-to-word-working.mjs ==
+Step 14.1 PDF to Word working source contract passed (24 checks).
+
+== test-files/test-step-14-2-pdf-to-word-service-ocr.mjs ==
+Step 14.2 PDF to Word service/OCR source contract passed (22 checks).
+
+== test-files/test-step-14-3-pdf-to-word-converter-startup-proxy.mjs ==
+Step 14.3 PDF to Word converter startup/proxy contract passed (15 checks).
+
+== test-files/test-step-14-4-pdf-to-word-eslint-windows-gate.mjs ==
+Step 14.4 Windows ESLint corrective contract passed (11 checks).
+
+== test-files/test-step-14-5-pdfjs-document-cleanup-typescript.mjs ==
+Step 14.5 TypeScript corrective contract passed (8 checks).
+
+== test-files/test-step-14-6-migration-apply-verify-sequence.mjs ==
+Step 14.6 migration apply/verify sequence contract passed (12 checks).
+
+== test-files/test-step-14-7-windows-node24-dev-launcher.mjs ==
+Step 14.7 Windows Node 24 development launcher contract passed (15 checks).
+
+== test-files/test-step-14-8-migration-show-output-parser.mjs ==
+Step 14.8 migration-show output parser contract passed (11 source checks plus 5 functional fixtures).
+
+== test-files/test-step-14-9-dev-hydration-cache-isolation.mjs ==
+Step 14.9 development hydration/cache isolation contract passed (18 checks).
+
+== test-files/test-step-14-10-windows-cmd-crlf-label.mjs ==
+Step 14.10 Windows CMD CRLF/label contract passed (14 checks).
+
+== test-files/test-step-14-11-end-to-end-stability.mjs ==
+Step 14.12 end-to-end stability contract passed (17 checks).
+
+== test-files/test-step-14-12-windows-service-launch-path.mjs ==
+Step 14.12 Windows service-launch path corrective passed (18 checks).
+
+== test-files/test-step-14-13-preserve-layout-searchable-ocr.mjs ==
+Step 14.13 preserve-layout searchable OCR contract passed (20 checks).
+
+All 35 dependency-free source contracts passed.

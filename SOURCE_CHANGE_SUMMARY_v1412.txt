@@ -1,0 +1,11 @@
+NovaPDF v0.14.12 source change summary
+
+Changed runtime orchestration only:
+- RUN_NOVAPDF_ALL.cmd service-launch block
+- scripts/start-production-windows.ps1 (new)
+- START_NOVAPDF_WEB.cmd (new)
+- START_NOVAPDF_API.cmd (new)
+- START_NOVAPDF_WORKER.cmd (new)
+- current version labels, validation contract, and handoff documents
+
+PDF-to-Word/OCR engine and frozen Step 12.8 backend application files are unchanged.

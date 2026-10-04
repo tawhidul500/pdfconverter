@@ -1,0 +1,20 @@
+Continue NovaPDF from `NovaPDF_Project_Handoff_v130_Edit_PDF_Full.zip` and `NovaPDF_Build_Step_13_Edit_PDF.zip`.
+
+Before coding, read the complete `NovaPDF_Master_Project_Handoff_v130.md` and `NovaPDF_All_Tools_Options.md`, then inspect the actual source. Do not rebuild from assumptions.
+
+Current truthful state:
+- v0.13.0 contains a real browser-local Edit PDF implementation candidate with a dedicated workspace, flattened pdf-lib engine, a 43-check source contract, and a dependency-backed engine test;
+- all 15 dependency-free source contracts passed in the recovery sandbox;
+- the complete Step 12.8 Corrective Package 5 backend is byte-for-byte unchanged;
+- Edit PDF is not yet promoted to proven Working because the public-registry Windows clean install, lint, semantic TypeScript, all 11 engine tests, production build, 33-route runtime check, and ten-item Chrome checklist remain required;
+- Request signatures remains disabled and is not Working.
+
+First actions:
+1. Extract Step 13 without deleting Docker volumes.
+2. Follow `WINDOWS_VALIDATION_STEP_13.md` exactly.
+3. Run the root public-registry clean install, audit capture, lint, semantic TypeScript, 15 contracts, 11 engine tests, build, and 33-route check.
+4. Complete the ten-item Edit PDF Chrome checklist.
+5. Complete the preserved Corrective Package 5 backend clean-install, metadata, migration, API/worker, real sequential two-recipient E2E, and Sign PDF manual gates.
+6. Do not begin Request Signatures UI integration or mark Request signatures Working until the controlled root security regression and production-provider delivery/webhook gate also pass.
+
+Preserve all 32 tools, eleven previously proven engines, the Step 13 Edit PDF source, current NovaPDF design, right-side panels, preview behavior, one-way Sign PDF/Edit PDF active-page controller, lazy active-neighborhood previews, 50-200% zoom, file transfer, Start over, home reset, `allowedDevOrigins: ["172.24.48.1", "172.21.32.1"]`, public npm registry URLs only, and existing Docker volumes. Do not use `npm audit fix --force`.

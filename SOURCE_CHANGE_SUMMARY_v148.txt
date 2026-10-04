@@ -1,0 +1,7 @@
+Step 14.8 source changes:
+- Replaced the brittle exact `findstr` migration-show check with `scripts/verify-migration-show.mjs`.
+- Accepted TypeORM applied output with an optional numeric migration-order field, including `[X] 1 CreateSignatureRequestBackend1721800000000`.
+- Added ANSI-sequence removal and exact migration-name validation.
+- Preserved failure behavior for pending `[ ]` output and unrelated migration names.
+- Added five functional parser fixtures and the Step 14.8 regression contract.
+- Preserved Step 14.7 Node 24 launcher behavior, Step 14.6 migration ordering/idempotency, PDF-to-Word/OCR behavior, and Step 12.8 backend source.

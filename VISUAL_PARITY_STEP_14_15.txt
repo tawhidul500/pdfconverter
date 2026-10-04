@@ -1,0 +1,10 @@
+NovaPDF Step 14.15 visual validation
+
+PASS: line-grid native-object DOCX rendered as one page.
+PASS: complex-layout native-object DOCX rendered as one page.
+PASS: no visible black/gray cleanup spots in inspected renders.
+PASS: table borders/fills, supported shapes, pictures, and positioned text remain visually coherent.
+PASS: line-grid sample contains real Word tables rather than table artwork in the background.
+
+Renderer used: LibreOffice headless via the NovaPDF DOCX render QA workflow.
+Microsoft Word Windows acceptance remains required.

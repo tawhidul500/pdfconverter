@@ -1,0 +1,7 @@
+Step 14.14 backend byte identity
+
+Compared with NovaPDF v0.14.13:
+- file inventory: 68 / 68 identical
+- modified backend files: 0
+
+The frozen Step 12.8 Request Signatures backend was not changed.
